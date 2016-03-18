@@ -1,0 +1,116 @@
+﻿@model SMPWebservice.Models.SearchResponse
+
+<div class="row">
+    <ul id="search_pagination" class="pagination partners-pagination">
+        <!-- Search Result Pagination -->
+
+        <li class="first disabled"><a href="javascript:Navigate('start');">&lt;&lt;</a></li>
+        <li class="prev disabled"><a href="javascript:Navigate('previous');">&lt;</a></li>
+        @{
+            int total = Model.TotalRecords;
+            var data = Json.Encode(Model);
+            decimal totalPage = Math.Ceiling(Convert.ToDecimal(total) / 10);
+            int startPosiotion=Model.StartPosition ;
+            
+            
+                int cursor=0;
+                for (int i=startPosiotion;i<=totalPage;i++){
+                    cursor ++;
+                    if (cursor<=10){
+                        string name = "li" + i;
+                        if (i==startPosiotion){                            
+                            <li id="pagestart" name=@name class="page active"><a href="javascript:Navigate('@name');">@i</a></li>
+                        }else {                        
+                            <li class="page" name=@name><a href="javascript:Navigate('@name');">@i</a></li>
+                        }                    
+                    }
+                }
+                           
+            
+         }
+         <li class="next"><a href="javascript:Navigate('next');">&gt;</a></li>
+         <li class="last"><a href="javascript:Navigate('end');">&gt;&gt;</a></li>
+        
+    </ul>
+    <div class="interested-search col-md-12 hidden">
+       @* <h1>
+            You may also be interested in these</h1>
+        <br>
+        <h2>
+            <a href="">Visit Singapore 2014 expects double tourists influx</a></h2>
+        <p>
+            Whether it's visiting family and friends, overindulging in New Year goodies or visiting...</p>
+        <h2>
+            <a href="">Visit Singapore 2014 expects double tourists influx</a></h2>
+        <p>
+            Whether it's visiting family and friends, overindulging in New Year goodies or visiting...</p>
+        <h2>
+            <a href="">Visit Singapore 2014 expects double tourists influx</a></h2>
+        <p>
+            Whether it's visiting family and friends, overindulging in New Year goodies or visiting...</p>
+        <ul class="pagination partners-pagination">
+            <li><a href="#">1</a> </li>
+            <li><a href="#">2</a> </li>
+            <li><a href="#">3</a> </li>
+        </ul>*@
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(function(){
+        $(".desc").text(function (index, currentText) {
+            return currentText.substr(0, 300) + '...';
+        });        
+        var el = $('li[name=li'+@Model.CurrentPosition +']');
+        $(".page.active").removeClass('active');
+         $(el).addClass('page active');
+    });
+
+    function Navigate(name) {
+      var url = '@Url.Action("Navigate", "Home")';
+        
+        var i=$('#pagestart').text();
+        
+        
+         var $content = $(".content-box");
+        $content.html('<span>Loading...</span>');
+        var command=name;
+        if (name=='previous'){
+            name=parseInt(i)-10;
+            if (name <1)name=1;
+            i=name;
+        }
+        if (name=='next'){
+            name=parseInt(i)+10;
+        }
+        if (name=='start'){                      
+            name=1;
+            i=1;            
+        }
+        if (name=='end'){          
+            
+            name=(Math.ceil(@Model.TotalRecords / 10));
+            i=name-(name%10)+1;
+           
+        }
+         $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,
+            data: { start:i,index: name.toString().replace('li',''),command:command },
+
+            success: function (result) {
+                $content.hide();
+                $content.html(result);
+                $content.fadeIn(1000);
+            },
+            error: function (error) {
+                $content.hide();
+                $content.html('<span style="color:red;font-weight:bold">Result not found.</span>');
+                $content.fadeIn(1000);
+            },
+
+        });
+    }
+</script>

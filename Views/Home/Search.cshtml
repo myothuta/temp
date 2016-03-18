@@ -1,0 +1,65 @@
+﻿@model SMPWebservice.Models.SearchResponse
+           
+<table class="common-tbl cat" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th colspan=2>
+                <a href="" id="resultText"></a>
+            </th>
+            <th class="col1">
+            </th>
+            <th class="last-cell" width='15%'>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Contents.Length;i++ )
+        {
+            var content = Model.Contents[i];
+
+            var json = @Html.Raw(Json.Encode(content));
+            if (i < 10)
+            {       
+            <tr>
+                <td>
+                    <img src="@content.ImagePath.Replace("www-stg", "www")" alt="" width="150px" />
+                </td>
+                <td class="col1">
+                    <div>
+                        <h4>
+                            <a href="#" title="Content ID" onclick='ShowDetail(@json)'>@content.Id</a>
+                        </h4>
+                        <p class="desc" >
+                            @content.Desc
+                        </p>
+                    </div>
+                </td>
+                <td class="last-cell" width='15%' style="vertical-align: top">
+                    By <a href="" title="Donor Name">@content.DonorName
+                    </a>
+                    <br>
+                    @content.ViewCount view <a href="" title="">@content.LocationArea</a><br>
+                </td>
+            </tr>
+            }
+        }
+    </tbody>
+</table>
+@Html.Partial("Pager");
+
+<script type="text/javascript">
+    $(function () {
+        var term=$('#searchterm').val();   
+        $('#resultText').html('Search Result for "'+term+ '" : '+@Model.TotalRecords);
+    });
+
+    function ShowDetail(content) {
+            
+            swal({
+                title: content.Title,
+                text: content.Desc,
+                imageUrl: content.ImagePath.replace('www-stg','www')
+            });
+    }
+</script>
