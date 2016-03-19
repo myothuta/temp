@@ -316,6 +316,8 @@ var defaultParams = {
   title: '',
   text: '',
   type: null,
+  by: '',
+  view: '',
   allowOutsideClick: false,
   showConfirmButton: true,
   showCancelButton: false,
@@ -953,7 +955,7 @@ var injectedHTML =
 "<div class=\"sa-error-container\">\n      <div class=\"icon\">!</div>\n      <p>Not valid!</p>\n    </div>" +
 
 // Cancel and confirm buttons
-"<div class=\"sa-button-container\">\n      <button class=\"cancel\" tabIndex=\"2\">Cancel</button>\n      <div class=\"sa-confirm-button-container\">\n        <button class=\"confirm\" tabIndex=\"1\">OK</button>" +
+"<div class=\"sa-button-container\">\n  <div style=\"display: inline-block;float: left;margin-top: 30px;\"><p style=\"font-size:10px;margin-bottom:5px\" id='by'>By</p><p id='view' style=\"font-size:10px;\">View </p> </div>    <button class=\"cancel\" tabIndex=\"2\">Cancel</button>\n      <div class=\"sa-confirm-button-container\">\n        <button class=\"confirm\" tabIndex=\"1\">OK</button>" +
 
 // Loading animation
 "<div class=\"la-ball-fall\">\n          <div></div>\n          <div></div>\n          <div></div>\n        </div>\n      </div>\n    </div>" +
@@ -987,8 +989,13 @@ var setParameters = function setParameters(params) {
 
   var $title = modal.querySelector('h2');
   var $text = modal.querySelector('p');
+  var $by = modal.querySelector('#by');
+  var $view = modal.querySelector('#view');
   var $cancelBtn = modal.querySelector('button.cancel');
   var $confirmBtn = modal.querySelector('button.confirm');
+  
+  $by.innerHTML='By '+ params.by;
+  $view.innerHTML= params.view + ' view';
 
   /*
    * Title
@@ -1096,8 +1103,8 @@ var setParameters = function setParameters(params) {
     $customIcon.style.backgroundImage = 'url(' + params.imageUrl + ')';
     _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.show($customIcon);
 
-    var _imgWidth = 150;
-    var _imgHeight = 96;
+    var _imgWidth = 250;
+    var _imgHeight = 106;
 
     if (params.imageSize) {
       var dimensions = params.imageSize.toString().split('x');
