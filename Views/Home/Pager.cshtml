@@ -57,16 +57,7 @@
 </div>
 
 <script type="text/javascript">
-
-    $(function(){
-        $(".desc").text(function (index, currentText) {
-            return currentText.substr(0, 300) + '...';
-        });        
-        var el = $('li[name=li'+@Model.CurrentPosition +']');
-        $(".page.active").removeClass('active');
-         $(el).addClass('page active');
-    });
-
+   
     function Navigate(name) {
       var url = '@Url.Action("Navigate", "Home")';
         

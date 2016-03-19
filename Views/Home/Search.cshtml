@@ -3,14 +3,11 @@
 <table class="common-tbl cat" cellspacing="0" cellpadding="0">
     <thead>
         <tr>
-            <th colspan=2>
-                <a href="" id="resultText"></a>
+        
+            <th class="col1" colspan=2>
+             <a href="" id="resultText"></a>
             </th>
-            <th class="col1">
-            </th>
-            <th class="last-cell" width='15%'>
-                
-            </th>
+        
         </tr>
     </thead>
     <tbody>
@@ -35,12 +32,12 @@
                         </p>
                     </div>
                 </td>
-                <td class="last-cell" width='15%' style="vertical-align: top">
+               @* <td class="last-cell" width='15%' style="vertical-align: top">
                     By <a href="" title="Donor Name">@content.DonorName
                     </a>
                     <br>
                     @content.ViewCount view <a href="" title="">@content.LocationArea</a><br>
-                </td>
+                </td>*@
             </tr>
             }
         }
@@ -50,6 +47,14 @@
 
 <script type="text/javascript">
     $(function () {
+    
+        $(".desc").text(function (index, currentText) {
+            return currentText.substr(0, 400) + '...';
+        });        
+        var el = $('li[name=li'+@Model.CurrentPosition +']');
+        $(".page.active").removeClass('active');
+         $(el).addClass('page active');
+    
         var term=$('#searchterm').val();   
         $('#resultText').html('Search Result for "'+term+ '" : '+@Model.TotalRecords);
     });
@@ -58,8 +63,10 @@
             
             swal({
                 title: content.Title,
-                text: content.Desc,
-                imageUrl: content.ImagePath.replace('www-stg','www')
+                text: content.Desc, 
+                imageUrl: content.ImagePath.replace('www-stg','www'),
+                by:content.DonorName,
+                view:content.ViewCount
             });
     }
 </script>
