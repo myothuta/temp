@@ -19,7 +19,7 @@ body.stop-scrolling {
 .sweet-alert {
   background-color: white;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  width: 478px;
+  width: 578px;
   padding: 17px;
   border-radius: 5px;
   text-align: center;
@@ -30,7 +30,9 @@ body.stop-scrolling {
   margin-top: -200px;
   overflow: hidden;
   display: none;
-  z-index: 99999; }
+  z-index: 99999; 
+ 
+  }
   @media all and (max-width: 540px) {
     .sweet-alert {
       width: auto;
@@ -55,10 +57,12 @@ body.stop-scrolling {
     text-align: center;
     font-weight: 300;
     position: relative;
-    text-align: inherit;
+    text-align: left;
     float: none;
     margin: 0;
     padding: 0;
+    max-height:280px;
+    overflow:auto;
     line-height: normal; }
   .sweet-alert fieldset {
     border: none;
@@ -160,7 +164,7 @@ body.stop-scrolling {
     display: block; }
   .sweet-alert .sa-confirm-button-container {
     display: inline-block;
-    position: relative; }
+    position: absolute; left:250px;bottom:15px; }
   .sweet-alert .la-ball-fall {
     position: absolute;
     left: 50%;
