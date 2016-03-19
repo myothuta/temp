@@ -82,8 +82,13 @@
         if (name=='end'){          
             
             name=(Math.ceil(@Model.TotalRecords / 10));
-            i=name-(name%10)+1;
-           
+            
+            if (name ==(name-(name%10))){
+                i=name;
+            }else{
+                i=name-(name%10)+1;
+            }
+
         }
          $.ajax({
             url: url,
