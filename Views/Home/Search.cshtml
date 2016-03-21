@@ -11,25 +11,31 @@
         </tr>
     </thead>
     <tbody>
+        @{
+            string categoryString = "";
+            if (Convert.ToBoolean(Session["category"]))
+            {
+                categoryString = " | Filter by: \"" + Session["categoryString"]+"\"";
+            } 
+        }
         @for (int i = 0; i < Model.Contents.Length;i++ )
         {
             var content = Model.Contents[i];
 
             var json = @Html.Raw(Json.Encode(content));
+            
             if (i < 10)
             {       
             <tr>
                 <td>
                     <img src="@content.ImagePath.Replace("www-stg", "www")" alt="" width="150px" />
                 </td>
-                <td class="col1">
+                <td class="col1" style="font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px">
                     <div>
                         <h4>
                             <a href="#" title="Content ID" onclick='ShowDetail(@json)'>@content.Id</a>
                         </h4>
-                        <p class="desc" >
-                            @content.Desc
-                        </p>
+                        <div class="contenttext">@Html.Raw(content.Desc)</div>
                     </div>
                 </td>
               
@@ -41,22 +47,36 @@
 @Html.Partial("Pager");
         <div class="clear">
         </div>
+@if (Model.keywords.Count > 0)
+{
+    <div class="" style="font-size:20px;margin-bottom:10px;font-weight:bold">  
+    Keywords
+    </div>      
+    <div class="" style="font-size:15px;">
+            @foreach (var keyword in Model.keywords)
+            {     
+                <span class="post-tag" style="margin-bottom:3px;padding:5px;cursor:pointer">@keyword</span>
+            }
+    </div>
+}
 <script type="text/javascript">
     $(function () {
     
-        $(".desc").text(function (index, currentText) {
+      $(".contenttext").html(function (index, currentText) {           
             return currentText.substr(0, 400) + '...';
-        });        
+        }); 
+       
         var el = $('li[name=li'+@Model.CurrentPosition +']');
         $(".page.active").removeClass('active');
          $(el).addClass('page active');
     
         var term=$('#searchterm').val();   
-        $('#resultText').html('Search Result for "'+term+ '" : '+@Model.TotalRecords);
+        var categoryString='@categoryString'
+        $('#resultText').html('Search Result for "'+term+ '" : '+ @Model.TotalRecords +categoryString);
     });
 
     function ShowDetail(content) {
-            
+   
             swal({
                 title: content.Title,
                 text: content.Desc, 

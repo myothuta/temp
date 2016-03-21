@@ -10,111 +10,17 @@
         
         <p class="search-box-long">
             <input type="text" id="searchterm" placeholder="Search tags" class="input-search-text" value="festival"  />
-            <input type="submit" id="btnSearch" value="" class="input-search-submit" " />
+            <input type="submit" id="btnSearch" value="" class="input-search-submit" onclick="search()" />
         </p>         
        
     </div>
     <!--end common-heading-sub-->
-    <div class="content-box last">
-      
-
+    <div class="content-box last">      
+        
     </div>
-
 </div>
-<div class="right-col">
-    <div class="right-col-fade-top">
-   @*     <div class="module-nav-container">
-            <div class="module-nav nav-base">
-                <h2>
-                    Shortcuts</h2>
-                <ul>
-                    <li><a href="http://forums.asp.net/f/active/0/1/20">Active Threads</a></li>
-                    <li><a href="http://forums.asp.net/f/unanswered/0/1/20">Unanswered Threads</a></li>
-                    <li><a href="http://forums.asp.net/f/unresolved/0/1/20">Unresolved Threads</a></li>
-                    <li><a href="http://www.asp.net/community/support">Support Options</a></li>
-                    <li><a href="http://forums.asp.net/search">Advanced Search</a></li>
-                </ul>
-            </div>
-        </div>*@
-        <div class="module-common">
-            <h2 class="common-header-underline" style="color:Red">
-               Festival Category</h2>
-                <div class="module-top-movers"> <h3></h3></div><div class="module-top-answerers">            
-                <h4>Name</h4>
-                <ul class="community-list">
-                    <li><a href="">Current name</a> &nbsp;(0) </li>
-                    <li><a href="">Alternative name</a> &nbsp;(0) </li>                   
-                </ul>
-                <h4>Function</h4>
-                <ul class="community-list">
-                    <li><a href="">Definition</a> &nbsp;(0) </li>                                      
-                </ul>
-                <h4>Significance</h4>
-                <ul class="community-list">
-                    <li><a href="">Cultural Significance</a> &nbsp;(0) </li>                                      
-                    <li><a href="">Social significance [in people’s lives]</a> &nbsp;(0) </li>
-                </ul>
-                <h4>Experience/Memory</h4>
-                <ul class="community-list">
-                    <li><a href="">Experience/Memory</a> &nbsp;(0) </li>                                                          
-                </ul>
-                <h4>Origin</h4>
-                <ul class="community-list">
-                    <li><a href="">Origin Story</a> &nbsp;(0) </li>                                                          
-                </ul>
-                <h4>Date</h4>
-                <ul class="community-list">
-                    <li><a href="">Typical Date</a> &nbsp;(0) </li>                                                          
-                    <li><a href="">Frequency</a> &nbsp;(0) </li>                                                          
-                </ul>
-                <h4>Associated People Group</h4>
-                <ul class="community-list">
-                    <li><a href="">Associated People Group</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Associated Activity/Event</h4>
-                <ul class="community-list">
-                    <li><a href="">Associated Activity/Event</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Program Item</h4>
-                <ul class="community-list">
-                    <li><a href="">Program Item</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Related Festival</h4>
-                <ul class="community-list">
-                    <li><a href="">Related Festival</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Interesting Fact</h4>
-                <ul class="community-list">
-                    <li><a href="">Interesting Fact</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Timeline</h4>
-                <ul class="community-list">
-                    <li><a href="">Date of Origin</a> &nbsp;(0) </li>
-                    <li><a href="">Date of Termination</a> &nbsp;(0) </li>      
-                    <li><a href="">Date-significant Feature</a> &nbsp;(0) </li>
-                    <li><a href="">Development Over Time</a> &nbsp;(0) </li>
-                    <li><a href="">Date-particular Celebration</a> &nbsp;(0) </li>                 
-                </ul>
-                <h4>Cultural Attribute</h4>
-                 <ul class="community-list">
-                    <li><a href="">Associated Belief</a> &nbsp;(0) </li>
-                    <li><a href="">Associated Food</a> &nbsp;(0) </li>      
-                    <li><a href="">Associated Attire</a> &nbsp;(0) </li>
-                    <li><a href="">Associated Object</a> &nbsp;(0) </li>
-                    <li><a href="">Nationalistic/Cultural element</a> &nbsp;(0) </li>                 
-                </ul>
-            </div>
-            <div class="clear">
-            </div>
-            <div class="module-top-movers">
-                <h3>         
-               </h3>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-       
-    </div>
+<div class="right-col" style="width:270px;margin-right:10px">
+@Html.Partial("UpdateCategory")
 </div>
 
 <script type="text/javascript">
@@ -125,6 +31,24 @@
         }
     });
 
+    function updateCategory(){
+      var url = '@Url.Action("UpdateCategory","Home")';
+      var $content = $(".right-col");
+            $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,          
+
+            success: function (result) {  
+                       
+                $content.html(result);                
+
+            },
+            error: function (error) {                
+                $content.html('<span style="color:red;font-weight:bold">Result not found.</span>');                
+            },
+        });    
+    }
     function search() {
         var url = '@Url.Action("Search","Home")';
         var $content = $(".content-box");
@@ -134,12 +58,13 @@
             url: url,
             type: 'GET',
             cache: false,
-            data: { text: $('#searchterm').val() },
+             data: { text: $('#searchterm').val() },
 
             success: function (result) {
                 $content.hide();
                 $content.html(result);
                 $content.fadeIn(1000);
+                updateCategory();
             },
             error: function (error) {
                 $content.hide();
@@ -148,7 +73,31 @@
             },
         });
     }
+     function searchByCategory(category) {
+     
+        var url = '@Url.Action("SearchByCategory","Home")';
+        var $content = $(".content-box");
+        $content.html('<span>Loading...</span>');
 
+        $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,
+             data: { category:category },
+
+            success: function (result) {
+                $content.hide();
+                $content.html(result);
+                $content.fadeIn(1000);
+                updateCategory();
+            },
+            error: function (error) {
+                $content.hide();
+                $content.html('<span style="color:red;font-weight:bold">Result not found.</span>');
+                $content.fadeIn(1000);
+            },
+        });
+    }
     $(function(){
         search();
     }); 

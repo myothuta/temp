@@ -3,33 +3,43 @@
 <div class="row">
     <ul id="search_pagination" class="pagination partners-pagination">
         <!-- Search Result Pagination -->
-
-        <li class="first disabled"><a href="javascript:Navigate('start');">&lt;&lt;</a></li>
-        <li class="prev disabled"><a href="javascript:Navigate('previous');">&lt;</a></li>
+                
         @{
             int total = Model.TotalRecords;
             var data = Json.Encode(Model);
             decimal totalPage = Math.Ceiling(Convert.ToDecimal(total) / 10);
-            int startPosiotion=Model.StartPosition ;
-            
-            
-                int cursor=0;
-                for (int i=startPosiotion;i<=totalPage;i++){
-                    cursor ++;
-                    if (cursor<=10){
-                        string name = "li" + i;
-                        if (i==startPosiotion){                            
+            int startPosiotion = Model.StartPosition;
+            int cursor = 0;
+
+            if (total > 0)
+            {
+                <li class="first disabled"><a href="javascript:Navigate('start');">&lt;&lt;</a></li>
+                <li class="prev disabled"><a href="javascript:Navigate('previous');">&lt;</a></li>    
+            }
+            for (int i = startPosiotion; i <= totalPage; i++)
+            {
+                cursor++;
+                if (cursor <= 10)
+                {
+                    string name = "li" + i;
+                    if (i == startPosiotion)
+                    {                            
                             <li id="pagestart" name=@name class="page active"><a href="javascript:Navigate('@name');">@i</a></li>
-                        }else {                        
+                    }
+                    else
+                    {                        
                             <li class="page" name=@name><a href="javascript:Navigate('@name');">@i</a></li>
-                        }                    
                     }
                 }
-                           
-            
+            }
+
+            if (total > 0)
+            { 
+                <li class="next"><a href="javascript:Navigate('next');">&gt;</a></li>
+                <li class="last"><a href="javascript:Navigate('end');">&gt;&gt;</a></li>
+            }
          }
-         <li class="next"><a href="javascript:Navigate('next');">&gt;</a></li>
-         <li class="last"><a href="javascript:Navigate('end');">&gt;&gt;</a></li>
+        
         
     </ul>
     <div class="interested-search col-md-12 hidden">
