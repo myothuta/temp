@@ -16,6 +16,8 @@ namespace SMPWebservice.Controllers
 
         public ActionResult Index()
         {
+
+            var record=CategoryMappings.Records;
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
             return View();
@@ -65,6 +67,13 @@ namespace SMPWebservice.Controllers
                     {
                         result = serializer.Deserialize(reader) as SearchResponse;
                         storeContents = storeContents.Union(result.Contents).ToArray();
+                        foreach (Content c in storeContents) {
+                            string desc = c.Desc;
+                            IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
+                            foreach (Record r in contain) { 
+                                
+                            }
+                        }
                     }
 
                     nextStartPosition += 30;

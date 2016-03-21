@@ -10,7 +10,7 @@
         
         <p class="search-box-long">
             <input type="text" id="searchterm" placeholder="Search tags" class="input-search-text" value="festival"  />
-            <input type="submit" id="btnSearch" value="" class="input-search-submit" " />
+            <input type="submit" id="btnSearch" value="" class="input-search-submit" onclick="search()" />
         </p>         
        
     </div>
@@ -21,88 +21,89 @@
     </div>
 
 </div>
-<div class="right-col">
+<div class="right-col" style="width:260px;margin-right:10px">
     <div class="right-col-fade-top">
-   @*     <div class="module-nav-container">
+        <div class="module-nav-container">
             <div class="module-nav nav-base">
-                <h2>
-                    Shortcuts</h2>
-                <ul>
+                <h2 style="margin-bottom:10px">
+                    Festival Category</h2>
+         @*       <ul>
                     <li><a href="http://forums.asp.net/f/active/0/1/20">Active Threads</a></li>
                     <li><a href="http://forums.asp.net/f/unanswered/0/1/20">Unanswered Threads</a></li>
                     <li><a href="http://forums.asp.net/f/unresolved/0/1/20">Unresolved Threads</a></li>
                     <li><a href="http://www.asp.net/community/support">Support Options</a></li>
                     <li><a href="http://forums.asp.net/search">Advanced Search</a></li>
+                </ul>*@
+
+               
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Name</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="">Current name</a></li>
+                    <li><a style="padding:1px 20px" href="">Alternative name</a></li>                   
                 </ul>
-            </div>
-        </div>*@
-        <div class="module-common">
-            <h2 class="common-header-underline" style="color:Red">
-               Festival Category</h2>
-                <div class="module-top-movers"> <h3></h3></div><div class="module-top-answerers">            
-                <h4>Name</h4>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Function</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="">Definition</a> </li>                                      
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Significance</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="">Cultural Significance</a> </li>                                      
+                    <li><a style="padding:1px 20px" href="">Social significance [in people’s lives]</a> </li>
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Experience/Memory</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="">Experience/Memory</a> </li>                                                          
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Origin</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="">Origin Story</a> </li>                                                          
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Date</h4>
                 <ul class="community-list">
-                    <li><a href="">Current name</a> &nbsp;(0) </li>
-                    <li><a href="">Alternative name</a> &nbsp;(0) </li>                   
+                    <li><a style="padding:1px 20px" href="">Typical Date</a> </li>                                                          
+                    <li><a style="padding:1px 20px" href="">Frequency</a> </li>                                                          
                 </ul>
-                <h4>Function</h4>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Associated People Group</h4>
                 <ul class="community-list">
-                    <li><a href="">Definition</a> &nbsp;(0) </li>                                      
+                    <li><a style="padding:1px 20px" href="">Associated People Group</a> </li>                                                                                                                                    
                 </ul>
-                <h4>Significance</h4>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Associated Activity/Event</h4>
                 <ul class="community-list">
-                    <li><a href="">Cultural Significance</a> &nbsp;(0) </li>                                      
-                    <li><a href="">Social significance [in people’s lives]</a> &nbsp;(0) </li>
+                    <li><a style="padding:1px 20px" href="">Associated Activity/Event</a> </li>                                                                                                                                    
                 </ul>
-                <h4>Experience/Memory</h4>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Program Item</h4>
                 <ul class="community-list">
-                    <li><a href="">Experience/Memory</a> &nbsp;(0) </li>                                                          
+                    <li><a style="padding:1px 20px" href="">Program Item</a> </li>                                                                                                                                    
                 </ul>
-                <h4>Origin</h4>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Related Festival</h4>
                 <ul class="community-list">
-                    <li><a href="">Origin Story</a> &nbsp;(0) </li>                                                          
+                    <li><a style="padding:1px 20px" href="">Related Festival</a> </li>                                                                                                                                    
                 </ul>
-                <h4>Date</h4>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Interesting Fact</h4>
                 <ul class="community-list">
-                    <li><a href="">Typical Date</a> &nbsp;(0) </li>                                                          
-                    <li><a href="">Frequency</a> &nbsp;(0) </li>                                                          
+                    <li><a style="padding:1px 20px" href="">Interesting Fact</a> </li>                                                                                                                                    
                 </ul>
-                <h4>Associated People Group</h4>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Timeline</h4>
                 <ul class="community-list">
-                    <li><a href="">Associated People Group</a> &nbsp;(0) </li>                                                                                                                                    
+                    <li><a style="padding:1px 20px" href="">Date of Origin</a> </li>
+                    <li><a style="padding:1px 20px" href="">Date of Termination</a> </li>      
+                    <li><a style="padding:1px 20px" href="">Date-significant Feature</a> </li>
+                    <li><a style="padding:1px 20px" href="">Development Over Time</a> </li>
+                    <li><a style="padding:1px 20px" href="">Date-particular Celebration</a> </li>                 
                 </ul>
-                <h4>Associated Activity/Event</h4>
-                <ul class="community-list">
-                    <li><a href="">Associated Activity/Event</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Program Item</h4>
-                <ul class="community-list">
-                    <li><a href="">Program Item</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Related Festival</h4>
-                <ul class="community-list">
-                    <li><a href="">Related Festival</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Interesting Fact</h4>
-                <ul class="community-list">
-                    <li><a href="">Interesting Fact</a> &nbsp;(0) </li>                                                                                                                                    
-                </ul>
-                <h4>Timeline</h4>
-                <ul class="community-list">
-                    <li><a href="">Date of Origin</a> &nbsp;(0) </li>
-                    <li><a href="">Date of Termination</a> &nbsp;(0) </li>      
-                    <li><a href="">Date-significant Feature</a> &nbsp;(0) </li>
-                    <li><a href="">Development Over Time</a> &nbsp;(0) </li>
-                    <li><a href="">Date-particular Celebration</a> &nbsp;(0) </li>                 
-                </ul>
-                <h4>Cultural Attribute</h4>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Cultural Attribute</h4>
                  <ul class="community-list">
-                    <li><a href="">Associated Belief</a> &nbsp;(0) </li>
-                    <li><a href="">Associated Food</a> &nbsp;(0) </li>      
-                    <li><a href="">Associated Attire</a> &nbsp;(0) </li>
-                    <li><a href="">Associated Object</a> &nbsp;(0) </li>
-                    <li><a href="">Nationalistic/Cultural element</a> &nbsp;(0) </li>                 
+                    <li><a style="padding:1px 20px" href="">Associated Belief</a> </li>
+                    <li><a style="padding:1px 20px" href="">Associated Food</a> </li>      
+                    <li><a style="padding:1px 20px" href="">Associated Attire</a> </li>
+                    <li><a style="padding:1px 20px" href="">Associated Object</a> </li>
+                    <li><a style="padding:1px 20px" href="">Nationalistic/Cultural element</a> </li>                 
                 </ul>
+
+            </div>
+        </div>
+   @*     <div class="module-common">
+           
             </div>
             <div class="clear">
             </div>
@@ -110,7 +111,7 @@
                 <h3>         
                </h3>
             </div>
-        </div>
+        </div>*@
         <div class="clear">
         </div>
        

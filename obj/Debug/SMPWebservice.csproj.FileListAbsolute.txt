@@ -10,5 +10,6 @@ D:\NTU\CI\SMPWebservice\SMPWebservice\bin\EntityFramework.dll
 D:\NTU\CI\SMPWebservice\SMPWebservice\bin\EntityFramework.xml
 D:\NTU\CI\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.dll
 D:\NTU\CI\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.pdb
-C:\Users\myothuta\Documents\Visual Studio 2010\Projects\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.csprojResolveAssemblyReference.cache
 D:\NTU\CI\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.csprojResolveAssemblyReference.cache
+C:\Users\myothuta\documents\visual studio 2010\Projects\SMPWebservice\SMPWebservice\bin\App_Data\CategoryMappings.xml
+D:\NTU\CI\SMPWebservice\SMPWebservice\bin\App_Data\CategoryMappings.xml
