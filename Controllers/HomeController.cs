@@ -16,6 +16,8 @@ namespace SMPWebservice.Controllers
 
         public ActionResult Index()
         {
+
+            var record=CategoryMappings.Records;
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
             return View();
@@ -29,6 +31,7 @@ namespace SMPWebservice.Controllers
         public ActionResult Search(string text)
         {
             Session["text"] = text;
+            Session["category"] = false;
             SearchResponse result = new SearchResponse();
             SearchResponse returnResult = new SearchResponse();
             result = WebCache.Get("searchResponse" + text);
@@ -65,6 +68,17 @@ namespace SMPWebservice.Controllers
                     {
                         result = serializer.Deserialize(reader) as SearchResponse;
                         storeContents = storeContents.Union(result.Contents).ToArray();
+                        foreach (Content c in storeContents) {
+                            string desc = c.Desc;
+                            IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
+                            foreach (Record r in contain) {
+                                if (result.Statistics.ContainsKey(r.Category))
+                                {
+                                    result.Statistics[r.Category] += 1;
+                                }
+                                c.record = r;
+                            }
+                        }
                     }
 
                     nextStartPosition += 30;
@@ -93,14 +107,30 @@ namespace SMPWebservice.Controllers
             return PartialView(returnResult);
         }
 
+        public ActionResult UpdateCategory() {
+            string text = Session["text"].ToString();
+            SearchResponse returnResult = WebCache.Get("searchResponse" + text);
+            
+            return PartialView(returnResult);
+        }
+
         public ActionResult Navigate(int start,int index,string command)
         {
             string text = Session["text"].ToString();
             SearchResponse returnResult = new SearchResponse();
-            var result = WebCache.Get("searchResponse" + text);
+            SearchResponse result = null;
+            if (Convert.ToBoolean(Session["category"]))
+            {
+                result = Session["searchResponseCategory"] as SearchResponse;
+            }
+            else
+            {
+                result = WebCache.Get("searchResponse" + text);
+            }
             returnResult.StartPosition = start;
             returnResult.CurrentPosition = index;
             returnResult.TotalRecords = result.TotalRecords;
+            returnResult.keywords = result.keywords;
             decimal pages = Decimal.Ceiling(Convert.ToDecimal(returnResult.TotalRecords) / 10);
 
             int from = (index*10)-10 ;
@@ -131,27 +161,56 @@ namespace SMPWebservice.Controllers
                     }
                 }
             }
-            //if (command == "previous")
-            //{
-            //    returnResult.StartPosition += 10;
-            //}
+          
             return PartialView("Search",returnResult);
         }
 
-        public ActionResult Pager(int start)
+        public ActionResult SearchByCategory(string category)
         {
-            var searchResponse = WebCache.Get("searchResponse");
-            decimal pages = 0;
-            if (searchResponse.TotalRecords > 0)
+            string text = Session["text"].ToString();
+            SearchResponse response = WebCache.Get("searchResponse" + text);
+            SearchResponse returnResult = new SearchResponse() ;
+            returnResult.keywords = new List<string>();
+            List<Content> contents = new List<Content>();
+            int totalRecords = 0;
+            foreach (Content c in response.Contents)
             {
-                pages = Decimal.Ceiling(Convert.ToDecimal(searchResponse.TotalRecords) / 10);
-                if (pages >= start +10)
+                string desc = c.Desc;
+                
+                IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
+                foreach (Record r in contain)
                 {
-                    searchResponse.StartPosition += 10;
+                    if (r.Category==category)
+                    {
+                        Content copyContent = new Content();
+                        copyContent.Desc = desc.Replace(r.Keyword, "<span class='post-tag'>" + r.Keyword + "</span>");
+                        copyContent.DonorName = c.DonorName;
+                        copyContent.Id = c.Id;
+                        copyContent.ImagePath = c.ImagePath;
+                        copyContent.LocationArea = c.LocationArea;
+                        copyContent.record = c.record;
+                        copyContent.Title = c.Title;
+                        copyContent.ViewCount = c.ViewCount;
+                        contents.Add(copyContent);
+                        totalRecords += 1;
+                        if (!returnResult .keywords.Contains(r.Keyword ))
+                        returnResult.keywords.Add(r.Keyword);
+                    }
                 }
+                
             }
-            return PartialView(searchResponse);
+            returnResult.StartPosition = 1;
+            returnResult.CurrentPosition = 1;
+            returnResult.TotalRecords = totalRecords;
+            returnResult.Statistics = response.Statistics;
+            returnResult.Contents = contents.ToArray();
+            Session["searchResponseCategory"]= returnResult;
+            Session["category"]=true;
+            Session["categoryString"] = category;
+            return PartialView("Search", returnResult);
         }
+
+     
 
     }
 }
