@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@model SMPWebservice.Models.SearchResponse
 
 @{var searchResponse = Model;}
@@ -89,3 +90,96 @@ else {
 
 
 
+=======
+﻿@model SMPWebservice.Models.SearchResponse
+
+@{var searchResponse = Model;}
+@if (Model == null)
+{
+    searchResponse = new SMPWebservice.Models.SearchResponse();
+}
+else {
+    searchResponse = Model;
+}
+
+
+    <div class="right-col-fade-top">
+        <div class="module-nav-container">
+            <div class="module-nav nav-base">
+                <h2 style="margin-bottom:10px">
+                    Festival Category</h2>               
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Name</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="#" name="Current name" onclick="searchByCategory('Current name')">Current name (@searchResponse.Statistics["Current name"])</a></li>
+                    <li><a style="padding:1px 20px" href="#" name="Alternative name" onclick="searchByCategory('Alternative name')">Alternative name (@searchResponse.Statistics["Alternative name"])</a></li>                   
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Function</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="#" name="Definition" onclick="searchByCategory('Definition')">Definition (@searchResponse.Statistics["Definition"])</a> </li>                                      
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Significance</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="#" name="Cultural Significance" onclick="searchByCategory('Cultural Significance')">Cultural Significance (@searchResponse.Statistics["Cultural Significance"])</a> </li>                                      
+                    <li><a style="padding:1px 20px" href="#" name="Social significance [in people’s lives]" onclick="searchByCategory('Social significance [in people’s lives]')">Social significance [in people’s lives] (@searchResponse.Statistics["Social significance [in people’s lives]"])</a> </li>
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Experience/Memory</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="#" name="Experience/memory" onclick="searchByCategory('Experience/memory')">Experience/memory (@searchResponse.Statistics["Experience/memory"])</a> </li>                                                          
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Origin</h4>
+                <ul class="">
+                    <li><a style="padding:1px 20px" href="#" name="Origin story" onclick="searchByCategory('Origin story')">Origin story (@searchResponse.Statistics["Origin story"])</a> </li>                                                          
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Date</h4>
+                <ul class="community-list">
+                    <li><a style="padding:1px 20px" href="#" name="Typical date" onclick="searchByCategory('Typical date')">Typical date (@searchResponse.Statistics["Typical date"])</a> </li>                                                          
+                    <li><a style="padding:1px 20px" href="#" name="Frequency" onclick="searchByCategory('Frequency')">Frequency (@searchResponse.Statistics["Frequency"])</a> </li>                                                          
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Associated People Group</h4>
+                <ul class="community-list">
+                    <li><a style="padding:1px 20px" href="#" name="Associated people group" onclick="searchByCategory('Associated people group')">Associated people group (@searchResponse.Statistics["Associated people group"])</a> </li>                                                                                                                                    
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Associated Activity/Event</h4>
+                <ul class="community-list">
+                    <li><a style="padding:1px 20px" href="#" name="Associated activity/event" onclick="searchByCategory('Associated activity/event')">Associated activity/event (@searchResponse.Statistics["Associated activity/event"])</a> </li>                                                                                                                                    
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Program Item</h4>
+                <ul class="community-list">
+                    <li><a style="padding:1px 20px" href="#" name="Program item" onclick="searchByCategory('Program item')">Program item (@searchResponse.Statistics["Program item"])</a> </li>                                                                                                                                    
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Related Festival</h4>
+                <ul class="community-list">
+                    <li><a style="padding:1px 20px" href="#" name="Related festival" onclick="searchByCategory('Related festival')">Related festival (@searchResponse.Statistics["Related festival"])</a> </li>                                                                                                                                    
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Interesting Fact</h4>
+                <ul class="community-list">
+                    <li><a style="padding:1px 20px" href="#" name="Interesting fact" onclick="searchByCategory('Interesting fact')">Interesting fact (@searchResponse.Statistics["Interesting fact"])</a> </li>                                                                                                                                    
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Timeline</h4>
+                <ul class="community-list">
+                    <li><a style="padding:1px 20px" href="#" name="Date of origin" onclick="searchByCategory('Date of origin')">Date of origin (@searchResponse.Statistics["Date of origin"])</a> </li>
+                    <li><a style="padding:1px 20px" href="#" name="Date of termination" onclick="searchByCategory('Date of termination')">Date of termination (@searchResponse.Statistics["Date of termination"])</a> </li>      
+                    <li><a style="padding:1px 20px" href="#" name="Date-significant feature" onclick="searchByCategory('Date-significant feature')">Date-significant feature (@searchResponse.Statistics["Date-significant feature"])</a> </li>
+                    <li><a style="padding:1px 20px" href="#" name="Development over time" onclick="searchByCategory('Development over time')">Development over time (@searchResponse.Statistics["Development over time"])</a> </li>
+                    <li><a style="padding:1px 20px" href="#" name="Date-particular celebration" onclick="searchByCategory('Date-particular celebration')">Date-particular celebration (@searchResponse.Statistics["Date-particular celebration"])</a> </li>                 
+                </ul>
+                <h4 style="margin:0px 10px;color:darkgoldenrod">Cultural Attribute</h4>
+                 <ul class="community-list">
+                    <li><a style="padding:1px 20px" href="#" name="Associated belief" onclick="searchByCategory('Associated belief')">Associated belief (@searchResponse.Statistics["Associated belief"])</a> </li>
+                    <li><a style="padding:1px 20px" href="#" name="Associated food" onclick="searchByCategory('Associated food')">Associated food (@searchResponse.Statistics["Associated food"])</a> </li>      
+                    <li><a style="padding:1px 20px" href="#" name="Associated attire" onclick="searchByCategory('Associated attire')">Associated attire (@searchResponse.Statistics["Associated attire"])</a> </li>
+                    <li><a style="padding:1px 20px" href="#" name="Associated object" onclick="searchByCategory('Associated object')">Associated object (@searchResponse.Statistics["Associated object"])</a> </li>
+                    <li><a style="padding:1px 20px" href="#" name="Nationalistic/cultural element" onclick="searchByCategory('Nationalistic/cultural element')">Nationalistic/cultural element (@searchResponse.Statistics["Nationalistic/cultural element"])</a> </li>                 
+                </ul>
+
+            </div>
+        </div>
+  
+        <div class="clear">
+        </div>
+       
+    </div>
+
+
+
+>>>>>>> origin/master
