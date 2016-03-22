@@ -1005,7 +1005,10 @@ var setParameters = function setParameters(params) {
   /*
    * Text
    */
-  $text.innerHTML = params.html ? params.text : _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.text || '').split('\n').join('<br>');
+   //MTT 
+ // $text.innerHTML = params.html ? ''+params.text+'' : _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.text || '').split('\n').join('<br>');
+ $text.innerHTML =''+params.text+'';
+ 
   if (params.text) _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.show($text);
 
   /*
