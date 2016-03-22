@@ -25,13 +25,16 @@
 
 
 .post-tag {
-    color: #39739d;  
+
+    
+    text-align: center;
+    color: #fff;  
     white-space: nowrap;
-    background: #E1ECF4;
-    border: 1px solid #E1ECF4;
+    background: #739e73;
+    border: 1px solid #739e73;
     display: inline-block;
     margin: 2px 2px 2px 0;
-    border-radius: 0;
+    border-radius: .25em;
 }
 
 /* Containers
