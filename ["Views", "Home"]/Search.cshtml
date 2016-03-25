@@ -1,0 +1,92 @@
+﻿@model SMPWebservice.Models.SearchResponse
+           
+<table class="common-tbl cat" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+        
+            <th class="col1" colspan=2>
+             <a href="" id="resultText"></a>
+            </th>
+        
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            string categoryString = "";
+            if (Convert.ToBoolean(Session["category"]))
+            {
+                categoryString = ""+ Session["categoryString"];
+            } 
+        }
+        @for (int i = 0; i < Model.Contents.Length;i++ )
+        {
+            var content = Model.Contents[i];
+
+            var json = @Html.Raw(Json.Encode(content));
+            
+            if (i < 10)
+            {       
+            <tr>
+                <td>
+                    <img src="@content.ImagePath.Replace("www-stg", "www")" alt="" width="150px" />
+                </td>
+                <td class="col1" style="font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px">
+                    <div>
+                        <h4>
+                            <a href="#" title="Content ID" onclick='ShowDetail(@json)'>@content.Id</a>
+                        </h4>
+                        <div class="contenttext">@Html.Raw(content.Desc)</div>
+                    </div>
+                </td>
+              
+            </tr>
+            }
+        }
+    </tbody>
+</table>
+@Html.Partial("Pager");
+        <div class="clear">
+        </div>
+@if (Model.keywords.Count > 0)
+{
+   <div class="" style="font-size:20px;margin-bottom:10px;font-weight:bold">  
+    Keywords
+    </div>      
+    <div class="" style="font-size:15px;">
+            @foreach (var keyword in Model.keywords)
+            {     
+                <span class="post-tag" style="margin-bottom:3px;padding:5px;cursor:pointer;background:#c2c2c2;border:1px solid #c2c2c2">@keyword</span>
+            }
+    </div>
+}
+<script type="text/javascript">
+    $(function () {
+    
+      $(".contenttext").html(function (index, currentText) {           
+            return currentText.substr(0, 400) + '...';
+        }); 
+       
+        var el = $('li[name=li'+@Model.CurrentPosition +']');
+        $(".page.active").removeClass('active');
+         $(el).addClass('page active');
+    
+        var term=$('#searchterm').val();   
+        var categoryString='@categoryString'
+
+        if (categoryString!='')
+            categoryString=" | Filter by: \"<span style='font-weight:bold'>"+'@categoryString'+"</span>";        
+        
+        $('#resultText').html('Search Result for "<span style="font-weight:bold">'+term+ '</span>" : '+ @Model.TotalRecords +categoryString);
+    });
+
+    function ShowDetail(content) {
+   
+            swal({
+                title: content.Title,
+                text: content.Desc, 
+                imageUrl: content.ImagePath.replace('www-stg','www'),
+                by:content.DonorName,
+                view:content.ViewCount
+            });
+    }
+</script>

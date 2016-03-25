@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="left-col">
+    <h1 class="common-heading" style="font-size:24px; color:Red">
+        Sentence Categorization Demo</h1>
+    <div class="common-heading-subbox">
+        <h2>
+            @*This website support advanced browsing and learning for singapore festival*@</h2>
+        
+        <p class="search-box-long">
+            <input type="text" id="searchterm" placeholder="Search tags" class="input-search-text" value="festival"  />
+            <input type="submit" id="btnSearch" value="" class="input-search-submit" onclick="search()" />
+        </p>         
+       
+    </div>
+    <!--end common-heading-sub-->
+    <div class="content-box last">      
+        
+    </div>
+</div>
+<div class="right-col" style="width:270px;margin-right:10px">
+@Html.Partial("UpdateCategory")
+</div>
+
+<script type="text/javascript">
+   
+    $("#searchterm").keyup(function (e) {
+        if (e.keyCode == 13) {            
+            search();
+        }
+    });
+
+    function updateCategory(){
+      var url = '@Url.Action("UpdateCategory","Home")';
+      var $content = $(".right-col");
+            $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,          
+
+            success: function (result) {  
+                       
+                $content.html(result);                
+
+            },
+            error: function (error) {                
+                $content.html('<span style="color:red;font-weight:bold">Result not found.</span>');                
+            },
+        });    
+    }
+    function search() {
+        var url = '@Url.Action("Search","Home")';
+        var $content = $(".content-box");
+        $content.html('<span>Loading...</span>');
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,
+             data: { text: $('#searchterm').val() },
+
+            success: function (result) {
+                $content.hide();
+                $content.html(result);
+                $content.fadeIn(1000);
+                updateCategory();
+            },
+            error: function (error) {
+                $content.hide();
+                $content.html('<span style="color:red;font-weight:bold">Result not found.</span>');
+                $content.fadeIn(1000);
+            },
+        });
+    }
+     function searchByCategory(category) {
+     
+        var url = '@Url.Action("SearchByCategory","Home")';
+        var $content = $(".content-box");
+        $content.html('<span>Loading...</span>');
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,
+             data: { category:category },
+
+            success: function (result) {
+                $content.hide();
+                $content.html(result);
+                $content.fadeIn(1000);
+                updateCategory();
+            },
+            error: function (error) {
+                $content.hide();
+                $content.html('<span style="color:red;font-weight:bold">Result not found.</span>');
+                $content.fadeIn(1000);
+            },
+        });
+    }
+    $(function(){
+        search();
+    }); 
+
+      
+</script>
