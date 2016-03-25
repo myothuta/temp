@@ -1,4 +1,4 @@
-﻿@model SMPWebservice.Models.SearchResponse
+@model SMPWebservice.Models.SearchResponse
            
 <table class="common-tbl cat" cellspacing="0" cellpadding="0">
     <thead>
@@ -15,7 +15,7 @@
             string categoryString = "";
             if (Convert.ToBoolean(Session["category"]))
             {
-                categoryString = " | Filter by: \"" + Session["categoryString"]+"\"";
+                categoryString = ""+ Session["categoryString"];
             } 
         }
         @for (int i = 0; i < Model.Contents.Length;i++ )
@@ -55,7 +55,7 @@
     <div class="" style="font-size:15px;">
             @foreach (var keyword in Model.keywords)
             {     
-                <span class="post-tag" style="margin-bottom:3px;padding:5px;cursor:pointer">@keyword</span>
+                <span class="post-tag" style="margin-bottom:3px;padding:5px;cursor:pointer;background:#c2c2c2;border:1px solid #c2c2c2">@keyword</span>
             }
     </div>
 }
@@ -72,7 +72,11 @@
     
         var term=$('#searchterm').val();   
         var categoryString='@categoryString'
-        $('#resultText').html('Search Result for "'+term+ '" : '+ @Model.TotalRecords +categoryString);
+
+        if (categoryString!='')
+            categoryString=" | Filter by: \"<span style='font-weight:bold'>"+'@categoryString'+"</span>";        
+        
+        $('#resultText').html('Search Result for "<span style="font-weight:bold">'+term+ '</span>" : '+ @Model.TotalRecords +categoryString);
     });
 
     function ShowDetail(content) {
