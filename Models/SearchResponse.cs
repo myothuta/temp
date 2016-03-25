@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,8 @@ namespace SMPWebservice.Models
     {
         [XmlIgnore]
         public Dictionary<string, int> Statistics { get; set; }
+        [XmlIgnore]
+        public Dictionary<string, string> statisticsId = new Dictionary<string, string>();
         [XmlIgnore]
         public List<string> keywords { get; set; }
         public SearchResponse() {
