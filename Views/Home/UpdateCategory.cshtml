@@ -1,4 +1,4 @@
-﻿@model SMPWebservice.Models.SearchResponse
+@model SMPWebservice.Models.SearchResponse
 
 @{var searchResponse = Model;}
 @if (Model == null)
@@ -72,11 +72,11 @@ else {
                 </ul>
                 <h4 style="margin:0px 10px;color:darkgoldenrod">Cultural Attribute</h4>
                  <ul class="">
-                    <li><a style="padding:1px 20px" onclick="searchByCategory('Associated belief')">Associated belief @(searchResponse.Statistics["Current name"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Current name"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" onclick="searchByCategory('Associated food')">Associated food @(searchResponse.Statistics["Current name"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Current name"] + "</span>") : Html.Raw(""))</a> </li>      
-                    <li><a style="padding:1px 20px" onclick="searchByCategory('Associated attire')">Associated attire @(searchResponse.Statistics["Current name"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Current name"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" onclick="searchByCategory('Associated object')">Associated object @(searchResponse.Statistics["Current name"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Current name"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" onclick="searchByCategory('Nationalistic/cultural element')">Nationalistic/cultural element @(searchResponse.Statistics["Current name"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Current name"] + "</span>") : Html.Raw(""))</a> </li>                 
+                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated belief')">Associated belief @(searchResponse.Statistics["Associated belief"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated belief"] + "</span>") : Html.Raw(""))</a> </li>
+                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated food')">Associated food @(searchResponse.Statistics["Associated food"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated food"] + "</span>") : Html.Raw(""))</a> </li>      
+                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated attire')">Associated attire @(searchResponse.Statistics["Associated attire"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated attire"] + "</span>") : Html.Raw(""))</a> </li>
+                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated object')">Associated object @(searchResponse.Statistics["Associated object"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated object"] + "</span>") : Html.Raw(""))</a> </li>
+                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Nationalistic/cultural element')">Nationalistic/cultural element @(searchResponse.Statistics["Nationalistic/cultural element"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Nationalistic/cultural element"] + "</span>") : Html.Raw(""))</a> </li>                 
                 </ul>
 
             </div>
