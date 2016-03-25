@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -38,6 +38,7 @@ namespace SMPWebservice.Controllers
             if (result == null)
             {
                 result = new SearchResponse();
+                
                 XmlSerializer serializer = new XmlSerializer(typeof(SearchResponse));
 
                 int nextStartPosition = 0;
@@ -74,7 +75,12 @@ namespace SMPWebservice.Controllers
                             foreach (Record r in contain) {
                                 if (result.Statistics.ContainsKey(r.Category))
                                 {
-                                    result.Statistics[r.Category] += 1;
+                                    if (!result.statisticsId.ContainsKey(c.Id+r.Category))
+                                    {
+                                        result.Statistics[r.Category] += 1;
+                                        result.statisticsId.Add(c.Id+r.Category, "");
+                                    }
+                                    
                                 }
                                 c.record = r;
                             }
@@ -170,8 +176,8 @@ namespace SMPWebservice.Controllers
             string text = Session["text"].ToString();
             SearchResponse response = WebCache.Get("searchResponse" + text);
             SearchResponse returnResult = new SearchResponse() ;
-            returnResult.keywords = new List<string>();
-            List<Content> contents = new List<Content>();
+            returnResult.keywords = new List<string>();            
+            Dictionary<string, Content> contents = new Dictionary<string, Models.Content>();
             int totalRecords = 0;
             foreach (Content c in response.Contents)
             {
@@ -180,21 +186,30 @@ namespace SMPWebservice.Controllers
                 IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
                 foreach (Record r in contain)
                 {
-                    if (r.Category==category)
+                    if (r.Category == category)
                     {
                         Content copyContent = new Content();
-                        copyContent.Desc = desc.Replace(r.Keyword, "<span class='post-tag'>" + r.Keyword + "</span>");
-                        copyContent.DonorName = c.DonorName;
-                        copyContent.Id = c.Id;
-                        copyContent.ImagePath = c.ImagePath;
-                        copyContent.LocationArea = c.LocationArea;
-                        copyContent.record = c.record;
-                        copyContent.Title = c.Title;
-                        copyContent.ViewCount = c.ViewCount;
-                        contents.Add(copyContent);
-                        totalRecords += 1;
-                        if (!returnResult .keywords.Contains(r.Keyword ))
-                        returnResult.keywords.Add(r.Keyword);
+                        if (contents.ContainsKey(c.Id))
+                        {
+                            copyContent = contents[c.Id];
+                            copyContent.Desc = copyContent.Desc.Replace(r.Keyword, "<span class='post-tag'>" + r.Keyword + "</span>");
+                        }
+                        else {
+                            contents.Add(c.Id, copyContent);
+                            totalRecords += 1;
+                            copyContent.Desc = desc.Replace(r.Keyword, "<span class='post-tag'>" + r.Keyword + "</span>");
+                            copyContent.DonorName = c.DonorName;
+                            copyContent.Id = c.Id;
+                            copyContent.ImagePath = c.ImagePath;
+                            copyContent.LocationArea = c.LocationArea;
+                            copyContent.record = c.record;
+                            copyContent.Title = c.Title;
+                            copyContent.ViewCount = c.ViewCount;
+                        }                        
+                       
+                        if (!returnResult.keywords.Contains(r.Keyword))
+                            returnResult.keywords.Add(r.Keyword);
+
                     }
                 }
                 
@@ -203,7 +218,7 @@ namespace SMPWebservice.Controllers
             returnResult.CurrentPosition = 1;
             returnResult.TotalRecords = totalRecords;
             returnResult.Statistics = response.Statistics;
-            returnResult.Contents = contents.ToArray();
+            returnResult.Contents = contents.Values.ToArray();
             Session["searchResponseCategory"]= returnResult;
             Session["category"]=true;
             Session["categoryString"] = category;
