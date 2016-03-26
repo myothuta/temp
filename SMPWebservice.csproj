@@ -79,6 +79,7 @@
     <Content Include="Content\themes\base\images\header.png" />
     <Content Include="Content\themes\base\images\logo-ntu.png" />
     <Content Include="Content\themes\base\images\mindmap-screenshot2.png" />
+    <Content Include="Content\themes\base\images\Preloader_11.gif" />
     <Content Include="Content\themes\base\images\smplogo.png" />
     <Content Include="Content\themes\base\images\sprite-forums.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
