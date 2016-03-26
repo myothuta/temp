@@ -2,20 +2,38 @@
     ViewBag.Title = "Home Page";
 }
 <div class="left-col">
-    <h1 class="common-heading" style="font-size:24px; color:Red">
-        Sentence Categorization Demo</h1>
-    <div class="common-heading-subbox">
-        <h2>
-            @*This website support advanced browsing and learning for singapore festival*@</h2>
-        
-        <p class="search-box-long">
+@*<div style="height:35px">
+<div class="form-container" action="">
+				<input type="text" class="search-field" id="searchterm" value="Festival">
+				<div class="submit-container">
+					<input type="submit" value="" class="submit">
+				</div>
+</div>
+<div id="search-form">
+        <input type="text" id="searchterm" value='Festival'/>
+        <input type="submit" value="Search"/>
+</div>
+</div>*@
+
+<div style="float:left">
+<h1 class="common-heading" style="font-size:24px; color:Red">Sentence Categorization Demo</h1>
+</div>
+	
+    <div class="common-heading-subbox" style="float:right;margin-bottom:10px">       
+        <div id="search-form" >
+            <input type="text" id="searchterm" value='Festival'/>
+            <input type="submit" value="Search" onclick="search()"/>
+        </div>
+       
+      @* <p class="search-box-long">
             <input type="text" id="searchterm" placeholder="Search tags" class="input-search-text" value="festival"  />
             <input type="submit" id="btnSearch" value="" class="input-search-submit" onclick="search()" />
-        </p>         
+        </p> *@   
        
     </div>
     <!--end common-heading-sub-->
-    <div class="content-box last">      
+   
+    <div class="content-box last" >      
         
     </div>
 </div>
@@ -52,7 +70,8 @@
     function search() {
         var url = '@Url.Action("Search","Home")';
         var $content = $(".content-box");
-        $content.html('<span>Loading...</span>');
+        $content.html(' <div class="se-pre-con" style="background:green;width:100%;height:500px;background: url(../../Content/themes/base/images/Preloader_11.gif) center no-repeat #fff;"></div>');
+
 
         $.ajax({
             url: url,
@@ -77,7 +96,7 @@
      
         var url = '@Url.Action("SearchByCategory","Home")';
         var $content = $(".content-box");
-        $content.html('<span>Loading...</span>');
+        $content.html(' <div class="se-pre-con" style="background:green;width:100%;height:500px;background: url(../../Content/themes/base/images/Preloader_11.gif) center no-repeat #fff;"></div>');
 
         $.ajax({
             url: url,

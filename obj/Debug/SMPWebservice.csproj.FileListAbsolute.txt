@@ -18,3 +18,9 @@ D:\exam\CI\temp-master\bin\SMPWebservice.dll
 D:\exam\CI\temp-master\bin\SMPWebservice.pdb
 D:\exam\CI\temp-master\obj\Debug\SMPWebservice.dll
 D:\exam\CI\temp-master\obj\Debug\SMPWebservice.pdb
+D:\exam\CI\temp\bin\App_Data\CategoryMappings.xml
+D:\exam\CI\temp\bin\SMPWebservice.dll
+D:\exam\CI\temp\bin\SMPWebservice.pdb
+D:\exam\CI\temp\obj\Debug\SMPWebservice.csprojResolveAssemblyReference.cache
+D:\exam\CI\temp\obj\Debug\SMPWebservice.dll
+D:\exam\CI\temp\obj\Debug\SMPWebservice.pdb
