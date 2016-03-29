@@ -76,7 +76,7 @@ namespace SMPWebservice.Controllers
             returnResult.Statistics = response.Statistics;
             returnResult.Contents = contents.ToArray();
 
-            D3MindMapData d3Data = new D3MindMapData(returnResult, "CNY");
+            D3MindMapData d3Data = new D3MindMapData(returnResult, text);
             return Json(d3Data, JsonRequestBehavior.AllowGet);
         }
     }
