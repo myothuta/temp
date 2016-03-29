@@ -68,6 +68,6 @@ namespace SMPWebservice.Models
         public string DonorName { get; set; }
         public string LocationArea { get; set; }
         public int ViewCount { get; set; }
-
+        public string Category { get; set; }
     }
 }
