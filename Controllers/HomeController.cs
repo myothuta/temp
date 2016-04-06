@@ -52,6 +52,25 @@ namespace SMPWebservice.Controllers
                 {
                     result = serializer.Deserialize(reader) as SearchResponse;
                     storeContents = result.Contents;
+
+                    foreach (Content c in storeContents)
+                    {
+                        string desc = c.Desc;
+                        IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
+                        foreach (Record r in contain)
+                        {
+                            if (result.Statistics.ContainsKey(r.Category))
+                            {
+                                if (!result.statisticsId.ContainsKey(c.Id + r.Category))
+                                {
+                                    result.Statistics[r.Category] += 1;
+                                    result.statisticsId.Add(c.Id + r.Category, "");
+                                }
+
+                            }
+                            c.record = r;
+                        }
+                    }
                 }
 
                 if (result.TotalRecords > 0)
@@ -69,6 +88,7 @@ namespace SMPWebservice.Controllers
                     {
                         result = serializer.Deserialize(reader) as SearchResponse;
                         storeContents = storeContents.Union(result.Contents).ToArray();
+
                         foreach (Content c in storeContents) {
                             string desc = c.Desc;
                             IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));

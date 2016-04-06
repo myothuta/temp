@@ -15,69 +15,18 @@ else {
             <div class="module-nav nav-base" style="border-radius:15px;">
                 <h2 style="margin-bottom:10px;border-top-left-radius:15px;border-top-right-radius:15px">
                     Festival Category</h2>               
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Name</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Current name')">Current name @(searchResponse.Statistics["Current name"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Current name"] + "</span>") : Html.Raw(""))</a></li>
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Alternative name')">Alternative name @(searchResponse.Statistics["Alternative name"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Alternative name"] + "</span>") : Html.Raw(""))</a></li>                   
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Function</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Definition')">Definition @(searchResponse.Statistics["Definition"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Definition"] + "</span>") : Html.Raw(""))</a> </li>                                      
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Significance</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Cultural Significance')">Cultural Significance @(searchResponse.Statistics["Cultural Significance"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Cultural Significance"] + "</span>") : Html.Raw(""))</a> </li>                                      
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Social significance [in people’s lives]')">Social significance [in people’s lives] @(searchResponse.Statistics["Social significance [in people’s lives]"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Social significance [in people’s lives]"] + "</span>") : Html.Raw(""))</a> </li>
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Experience/Memory</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Experience/memory')">Experience/memory @(searchResponse.Statistics["Experience/memory"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Experience/memory"] + "</span>") : Html.Raw(""))</a> </li>                                                          
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Origin</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Origin story')">Origin story @(searchResponse.Statistics["Origin story"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Origin story"] + "</span>") : Html.Raw(""))</a> </li>                                                          
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Date</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Typical date')">Typical date @(searchResponse.Statistics["Typical date"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Typical date"] + "</span>") : Html.Raw(""))</a> </li>                                                          
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Frequency')">Frequency @(searchResponse.Statistics["Frequency"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Frequency"] + "</span>") : Html.Raw(""))</a> </li>                                                          
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Associated People Group</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated people group')">Associated people group @(searchResponse.Statistics["Associated people group"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated people group"] + "</span>") : Html.Raw(""))</a> </li>                                                                                                                                    
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Associated Activity/Event</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated activity/event')">Associated activity/event @(searchResponse.Statistics["Associated activity/event"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated activity/event"] + "</span>") : Html.Raw(""))</a> </li>                                                                                                                                    
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Program Item</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Program item')">Program item @(searchResponse.Statistics["Program item"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Program item"] + "</span>") : Html.Raw(""))</a> </li>                                                                                                                                    
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Related Festival</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Related festival')">Related festival @(searchResponse.Statistics["Related festival"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Related festival"] + "</span>") : Html.Raw(""))</a> </li>                                                                                                                                    
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Interesting Fact</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Interesting fact')">Interesting fact @(searchResponse.Statistics["Interesting fact"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Interesting fact"] + "</span>") : Html.Raw(""))</a> </li>                                                                                                                                    
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Timeline</h4>
-                <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Date of origin')">Date of origin @(searchResponse.Statistics["Date of origin"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Date of origin"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Date of termination')">Date of termination @(searchResponse.Statistics["Date of termination"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Date of termination"] + "</span>") : Html.Raw(""))</a> </li>      
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Date-significant feature')">Date-significant feature @(searchResponse.Statistics["Date-significant feature"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Date-significant feature"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Development over time')">Development over time @(searchResponse.Statistics["Development over time"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Development over time"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Date-particular celebration')">Date-particular celebration @(searchResponse.Statistics["Date-particular celebration"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Date-particular celebration"] + "</span>") : Html.Raw(""))</a> </li>                 
-                </ul>
-                <h4 style="margin:0px 10px;color:darkgoldenrod">Cultural Attribute</h4>
-                 <ul class="">
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated belief')">Associated belief @(searchResponse.Statistics["Associated belief"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated belief"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated food')">Associated food @(searchResponse.Statistics["Associated food"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated food"] + "</span>") : Html.Raw(""))</a> </li>      
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated attire')">Associated attire @(searchResponse.Statistics["Associated attire"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated attire"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Associated object')">Associated object @(searchResponse.Statistics["Associated object"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Associated object"] + "</span>") : Html.Raw(""))</a> </li>
-                    <li><a style="padding:1px 20px" href="#" onclick="searchByCategory('Nationalistic/cultural element')">Nationalistic/cultural element @(searchResponse.Statistics["Nationalistic/cultural element"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Nationalistic/cultural element"] + "</span>") : Html.Raw(""))</a> </li>                 
-                </ul>
+                
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Cultural Attribute')">Cultural Attribute  @(searchResponse.Statistics["Cultural Attribute"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Cultural Attribute"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px  20px;color:darkgoldenrod" onclick="searchByCategory('Date')">Date  @(searchResponse.Statistics["Date"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Date"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Definition')">Definition  @(searchResponse.Statistics["Definition"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Definition"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Experience/Memory')">Experience/Memory  @(searchResponse.Statistics["Experience/Memory"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Experience/Memory"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Frequency')">Frequency  @(searchResponse.Statistics["Frequency"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Frequency"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Interesting Fact')">Interesting Fact  @(searchResponse.Statistics["Interesting Fact"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Interesting Fact"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Location')">Location  @(searchResponse.Statistics["Location"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Location"] + "</span>") : Html.Raw(""))</h4>                
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Name')">Name  @(searchResponse.Statistics["Name"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Name"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Significance')">Significance  @(searchResponse.Statistics["Significance"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Significance"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px 20px;color:darkgoldenrod" onclick="searchByCategory('Timeline')">Timeline  @(searchResponse.Statistics["Timeline"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Timeline"] + "</span>") : Html.Raw(""))</h4>
+                <h4 style="margin:10px 20px 20px 20px; padding-bottom:20px; color:darkgoldenrod" onclick="searchByCategory('Wish')">Wish  @(searchResponse.Statistics["Wish"] > 0 ? Html.Raw("<span class='badge'>" + searchResponse.Statistics["Wish"] + "</span>") : Html.Raw(""))</h4>
 
             </div>
         </div>
