@@ -51,6 +51,7 @@ namespace SMPWebservice.Models
         public string Id { get; set; }
         public string Title { get; set; }
         public string Desc { get; set; }
+        public string OrgDesc { get; set; }
         public string ImagePath { get; set; }
         public string DonorName { get; set; }
         public string LocationArea { get; set; }

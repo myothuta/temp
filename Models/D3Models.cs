@@ -292,7 +292,7 @@ namespace SMPWebservice.Models
             d3Root.children = new List<D3Model>();
             d3Root.id = count++;
             d3Root.depth = 0;
-
+            int NoOfPost = 0;
             foreach (var category in Resp.Statistics)
             {
                 D3Model d3ChildCat = new D3Model();
@@ -304,12 +304,15 @@ namespace SMPWebservice.Models
                 IEnumerable<Content> contents = Resp.Contents.Where(x => x.Category == category.Key);
                 if (contents.Count() > 0)
                 {
+                    NoOfPost = 0;
                     d3ChildCat._children = new List<children>();
                     foreach (var v in contents)
                     {
+                        if (NoOfPost > 30) continue;
+
                         children _child = new children();
                         _child.Desc = v.Desc;
-                        SentenceByWord = GetSentencebyKeyword(_child.Desc,v.KeyWord);
+                        SentenceByWord = GetSentencebyKeyword(v.OrgDesc,v.KeyWord);
                         int maxlength = 500;
                         maxlength = SentenceByWord.Length > 500 ? maxlength : SentenceByWord.Length;
                         _child.name = SentenceByWord.Substring(0, maxlength);
@@ -320,6 +323,7 @@ namespace SMPWebservice.Models
                         _child.DonorName = v.DonorName;
                         _child.id = count++;
                         _child.SMPID = v.Id;
+                        NoOfPost++;
                         d3ChildCat._children.Add(_child);
 
                     }

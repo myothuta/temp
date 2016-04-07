@@ -140,6 +140,7 @@ namespace SMPWebservice.Controllers
                             if (r.Category == category.Key)
                             {
                                 Content copyContent = new Content();
+                                copyContent.OrgDesc = desc;
                                 copyContent.Desc = desc.Replace(r.Keyword, "<span class='post-tag'>" + r.Keyword + "</span>");
                                 copyContent.DonorName = c.DonorName;
                                 copyContent.KeyWord = r.Keyword;
