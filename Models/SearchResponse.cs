@@ -56,5 +56,6 @@ namespace SMPWebservice.Models
         public string LocationArea { get; set; }
         public int ViewCount { get; set; }
         public string Category { get; set; }
+        public string KeyWord { get; set; }
     }
 }

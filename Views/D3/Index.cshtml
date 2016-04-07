@@ -65,6 +65,9 @@
         </div>
         <div class="hint">
             click to expand or collapse nodes</div>
+         <div class="content-box-D3" style="min-height:500px" >   
+    </div>
+    
     </div>
     <script type="text/javascript">
 
@@ -94,11 +97,16 @@
 
             var SearchVal = getParameterByName("SearchWord");
             var url = '@Url.Action("GetD3Data", "D3")';
-            var $content = $(".content-box");
-            $content.html('<span>Loading...</span>');
+
+            var $content = $(".content-box-D3");
+            $content.html(' <div class="se-pre-con" style="background:green;width:100%;height:500px;background: url(../../Content/themes/base/images/Preloader_11.gif) center no-repeat #fff;"></div>');
+
 
             d3.json(url, function (json) {
                 //console.log("json", json.d3Root);
+                var $content = $(".content-box-D3");
+                $content.hide();
+
                 root = json.d3Root;
                 root.x0 = h / 2;
                 root.y0 = 0;
@@ -114,17 +122,20 @@
                         }
                 }
 
+
                 // Initialize the display to show a few nodes.
                 root.children.forEach(toggleAll);
                 toggle(root.children[1]);
                 toggle(root.children[0]);
                 update(root);
+
             });
 
 
 
             function update(source) {
-                console.log("source", source);
+
+
                 var duration = d3.event && d3.event.altKey ? 5000 : 500;
 
                 // Compute the new tree layout.
@@ -237,9 +248,8 @@
             }
 
             function ShowDetail(content) {
-
                 swal({
-                    title: content.Title,
+                    title: content.SMPID,
                     text: content.Desc,
                     imageUrl: content.ImagePath.replace('www-stg', 'www'),
                     view: content.ViewCount

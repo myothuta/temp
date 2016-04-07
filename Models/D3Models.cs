@@ -177,6 +177,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace SMPWebservice.Models
 {
@@ -206,6 +207,7 @@ namespace SMPWebservice.Models
         public string name { get; set; }
         public int size { get; set; }
         public int id { get; set; }
+        public string SMPID { get; set; }
         public string Title { get; set; }
         public string Desc { get; set; }
         public string ImagePath { get; set; }
@@ -297,6 +299,8 @@ namespace SMPWebservice.Models
                 d3ChildCat.name = category.Key;
                 d3ChildCat.id = count++;
                 d3ChildCat.depth = 1;
+                string SentenceByWord = "";
+
                 IEnumerable<Content> contents = Resp.Contents.Where(x => x.Category == category.Key);
                 if (contents.Count() > 0)
                 {
@@ -305,16 +309,17 @@ namespace SMPWebservice.Models
                     {
                         children _child = new children();
                         _child.Desc = v.Desc;
-                        int maxlength = 100;
-                        maxlength = v.Desc.Length > 100 ? maxlength : v.Desc.Length;
-                        _child.name = v.Desc.Substring(0, maxlength);
+                        SentenceByWord = GetSentencebyKeyword(_child.Desc,v.KeyWord);
+                        int maxlength = 500;
+                        maxlength = SentenceByWord.Length > 500 ? maxlength : SentenceByWord.Length;
+                        _child.name = SentenceByWord.Substring(0, maxlength);
                         _child.Title = v.Title;
                         _child.ImagePath = v.ImagePath;
-                        _child.id = count++;
                         _child.LocationArea = v.LocationArea;
                         _child.ViewCount = v.ViewCount;
                         _child.DonorName = v.DonorName;
                         _child.id = count++;
+                        _child.SMPID = v.Id;
                         d3ChildCat._children.Add(_child);
 
                     }
@@ -322,6 +327,22 @@ namespace SMPWebservice.Models
                 d3Root.children.Add(d3ChildCat);
 
             }
+
+        }
+
+        public string GetSentencebyKeyword(string sentences,string keyword)
+        {
+            string resultStr = sentences;
+            var r = new Regex("[^.!?;]*(" + keyword + ")[^.!?;]*");
+            var m = r.Matches(sentences);
+
+            var result = Enumerable.Range(0, m.Count).Select(index => m[index].Value).ToList();
+            if (result.Count > 0)
+            {
+                resultStr = result.First();
+            }
+
+            return resultStr;
 
         }
     }
