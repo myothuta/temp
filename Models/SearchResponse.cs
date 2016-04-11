@@ -18,17 +18,35 @@ namespace SMPWebservice.Models
         public SearchResponse() {
             keywords = new List<string>();
             Statistics = new Dictionary<string, int>();
-            Statistics.Add("Cultural Attribute", 0);
+            //Statistics.Add("Cultural Attribute", 0);
+            //Statistics.Add("Date", 0);
+            //Statistics.Add("Definition", 0);
+            //Statistics.Add("Experience/Memory", 0);
+            //Statistics.Add("Frequency", 0);
+            //Statistics.Add("Interesting Fact", 0);
+            //Statistics.Add("Location", 0);
+            //Statistics.Add("Name", 0);
+            //Statistics.Add("Significance", 0);
+            //Statistics.Add("Timeline", 0);
+            //Statistics.Add("Wish", 0);
+            //Statistics.Add("KeyPhrase", 0);
+
+            Statistics.Add("Name",0);
+            Statistics.Add("Function",0);
+            Statistics.Add("Significance",0);
+            Statistics.Add("Experience/memory",0);
+            Statistics.Add("Origin",0);
             Statistics.Add("Date", 0);
-            Statistics.Add("Definition", 0);
-            Statistics.Add("Experience/Memory", 0);
-            Statistics.Add("Frequency", 0);
-            Statistics.Add("Interesting Fact", 0);
-            Statistics.Add("Location", 0);
-            Statistics.Add("Name", 0);
-            Statistics.Add("Significance", 0);
-            Statistics.Add("Timeline", 0);
-            Statistics.Add("Wish", 0);
+            Statistics.Add("Associated people group",0);
+            Statistics.Add("Associated activity/event",0);
+            Statistics.Add("Program item",0);
+            Statistics.Add("Related festival",0);
+            Statistics.Add("Interesting fact",0);
+            Statistics.Add("Timeline",0);
+            Statistics.Add("Cultural attribute",0);
+            Statistics.Add("Location",0);
+            Statistics.Add("Wish",0);
+            Statistics.Add("KeyPhrase", 0);
 
         }
         public string Status { get; set; }

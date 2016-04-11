@@ -234,34 +234,7 @@ namespace SMPWebservice.Models
         {
             Dictionary<string, int> Statistics = new Dictionary<string, int>();
 
-            Statistics.Add("Current name", 0);
-            Statistics.Add("Alternative name", 0);
-            Statistics.Add("Definition", 0);
-            Statistics.Add("Cultural Significance", 0);
-            Statistics.Add("Social significance [in people’s lives]", 0);
-            Statistics.Add("Experience/memory", 0);
-            Statistics.Add("Origin story", 0);
-            Statistics.Add("Typical date", 0);
-            Statistics.Add("Frequency", 0);
-            Statistics.Add("Associated people group", 0);
-            Statistics.Add("Associated activity/event", 0);
-            Statistics.Add("Program item", 0);
-            Statistics.Add("Related festival", 0);
-            Statistics.Add("Interesting fact", 0);
-            Statistics.Add("Date of origin", 0);
-            Statistics.Add("Date of termination", 0);
-            Statistics.Add("Date-significant feature", 0);
-            Statistics.Add("Development over time", 0);
-            Statistics.Add("Date-particular celebration", 0);
-            Statistics.Add("Associated belief", 0);
-            Statistics.Add("Associated food", 0);
-            Statistics.Add("Associated object", 0);
-            Statistics.Add("Associated attire", 0);
-            Statistics.Add("Nationalistic/cultural element", 0);
-
-
-
-            d3Root.name = "Festival";
+            d3Root.name = "";
             d3Root.children = new List<D3Model>();
             d3Root.id = count;
             d3Root.depth = 0;
