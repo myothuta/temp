@@ -151,6 +151,8 @@ namespace SMPWebservice.Controllers
                                 copyContent.Title = c.Title;
                                 copyContent.ViewCount = c.ViewCount;
                                 copyContent.Category = category.Key;
+                                 IEnumerable<Content> toCheck = contents.Where(x => x.Id == c.Id && x.KeyWord == copyContent.KeyWord);
+                                if (toCheck.Count()==0) 
                                 contents.Add(copyContent);
                                 totalRecords += 1;
                                 if (!returnResult.keywords.Contains(r.Keyword))
