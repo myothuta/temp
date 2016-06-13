@@ -52,6 +52,26 @@ namespace SMPWebservice.Controllers
                 {
                     result = serializer.Deserialize(reader) as SearchResponse;
                     storeContents = result.Contents;
+
+                    foreach (Content c in storeContents)
+                    {
+                        string desc = c.Desc;
+                        IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
+                        foreach (Record r in contain)
+                        {
+                            if (result.Statistics.ContainsKey(r.Category))
+                            {
+                                if (!result.statisticsId.ContainsKey(c.Id +"|"+ r.Category))
+                                {
+                                    result.Statistics[r.Category] += 1;
+                                    result.statisticsId.Add(c.Id +"|"+ r.Category, r);
+                                }
+
+                            }
+                           
+                           
+                        }
+                    }
                 }
 
                 if (result.TotalRecords > 0)
@@ -69,20 +89,21 @@ namespace SMPWebservice.Controllers
                     {
                         result = serializer.Deserialize(reader) as SearchResponse;
                         storeContents = storeContents.Union(result.Contents).ToArray();
+
                         foreach (Content c in storeContents) {
                             string desc = c.Desc;
                             IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
                             foreach (Record r in contain) {
                                 if (result.Statistics.ContainsKey(r.Category))
                                 {
-                                    if (!result.statisticsId.ContainsKey(c.Id+r.Category))
+                                    if (!result.statisticsId.ContainsKey(c.Id + "|" + r.Category))
                                     {
                                         result.Statistics[r.Category] += 1;
-                                        result.statisticsId.Add(c.Id+r.Category, "");
+                                        result.statisticsId.Add(c.Id + "|" + r.Category, r);
                                     }
                                     
                                 }
-                                c.record = r;
+                             
                             }
                         }
                     }
@@ -93,7 +114,7 @@ namespace SMPWebservice.Controllers
 
                 result.Contents = storeContents;
 
-                WebCache.Set("searchResponse" + text, result);
+                WebCache.Set("searchResponse" + text, result,120);
             }
 
             returnResult.StartPosition = 1;
@@ -201,10 +222,10 @@ namespace SMPWebservice.Controllers
                             copyContent.DonorName = c.DonorName;
                             copyContent.Id = c.Id;
                             copyContent.ImagePath = c.ImagePath;
-                            copyContent.LocationArea = c.LocationArea;
-                            copyContent.record = c.record;
+                            copyContent.LocationArea = c.LocationArea;                            
                             copyContent.Title = c.Title;
                             copyContent.ViewCount = c.ViewCount;
+                           
                         }                        
                        
                         if (!returnResult.keywords.Contains(r.Keyword))

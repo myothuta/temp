@@ -955,7 +955,7 @@ var injectedHTML =
 "<div class=\"sa-error-container\">\n      <div class=\"icon\">!</div>\n      <p>Not valid!</p>\n    </div>" +
 
 // Cancel and confirm buttons
-"<div class=\"sa-button-container\">\n  <div style=\"display: inline-block;float: left;margin-top: 30px;\"><p style=\"font-size:10px;margin-bottom:5px\" id='by'>By</p><p id='view' style=\"font-size:10px;\">View </p> </div>    <button class=\"cancel\" tabIndex=\"2\">Cancel</button>\n      <div class=\"sa-confirm-button-container\">\n        <button class=\"confirm\" tabIndex=\"1\">OK</button>" +
+"<div class=\"sa-button-container\">\n  <div style=\"display: inline-block;float: left;margin-top: 30px;\"><p style=\"font-size:10px;margin-bottom:5px\" id='by'>By</p><p id='view' style=\"font-size:10px;\">View </p> </div> <div style=\"display: inline-block;float: right;margin-top: 30px;\"><a id='smplink' href=\"\" target='_blank' style=\"font-size:16px;\">View on sinpaore memory</a> </div>   <button class=\"cancel\" tabIndex=\"2\">Cancel</button>\n      <div class=\"sa-confirm-button-container\">\n        <button class=\"confirm\" tabIndex=\"1\">OK</button>" +
 
 // Loading animation
 "<div class=\"la-ball-fall\">\n          <div></div>\n          <div></div>\n          <div></div>\n        </div>\n      </div>\n    </div>" +
@@ -991,24 +991,25 @@ var setParameters = function setParameters(params) {
   var $text = modal.querySelector('p');
   var $by = modal.querySelector('#by');
   var $view = modal.querySelector('#view');
+  var $smplink = modal.querySelector('#smplink');
   var $cancelBtn = modal.querySelector('button.cancel');
   var $confirmBtn = modal.querySelector('button.confirm');
   
   $by.innerHTML='By '+ params.by;
   $view.innerHTML= params.view + ' view';
-
+  $smplink.href= "http://www.singaporememory.sg/contents/"+params.title;
   /*
    * Title
    */
-  $title.innerHTML = params.html ? params.title : _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.title).split('\n').join('<br>');
-
+ // $title.innerHTML = params.html ? params.title : _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.title).split('\n').join('<br>');
+ $title.innerHTML="";
   /*
    * Text
    */
    //MTT 
- // $text.innerHTML = params.html ? ''+params.text+'' : _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.text || '').split('\n').join('<br>');
+  //$text.innerHTML = params.html ? ''+params.text+'' : _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.escapeHtml(params.text || '').split('\n').join('<br>');
  $text.innerHTML =''+params.text+'';
- 
+
   if (params.text) _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide.show($text);
 
   /*

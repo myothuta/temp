@@ -12,36 +12,41 @@ namespace SMPWebservice.Models
         [XmlIgnore]
         public Dictionary<string, int> Statistics { get; set; }
         [XmlIgnore]
-        public Dictionary<string, string> statisticsId = new Dictionary<string, string>();
+        public Dictionary<string, Record> statisticsId = new Dictionary<string, Record>();
         [XmlIgnore]
         public List<string> keywords { get; set; }
         public SearchResponse() {
             keywords = new List<string>();
             Statistics = new Dictionary<string, int>();
-            Statistics.Add("Current name", 0);
-            Statistics.Add("Alternative name", 0);
-            Statistics.Add("Definition", 0);
-            Statistics.Add("Cultural Significance", 0);
-            Statistics.Add("Social significance [in people’s lives]", 0);
-            Statistics.Add("Experience/memory", 0);
-            Statistics.Add("Origin story", 0);
-            Statistics.Add("Typical date", 0);
-            Statistics.Add("Frequency", 0);
-            Statistics.Add("Associated people group", 0);
-            Statistics.Add("Associated activity/event", 0);
-            Statistics.Add("Program item", 0);            
-            Statistics.Add("Related festival", 0);
-            Statistics.Add("Interesting fact", 0);
-            Statistics.Add("Date of origin", 0);
-            Statistics.Add("Date of termination", 0);
-            Statistics.Add("Date-significant feature", 0);
-            Statistics.Add("Development over time", 0);
-            Statistics.Add("Date-particular celebration", 0);
-            Statistics.Add("Associated belief", 0);
-            Statistics.Add("Associated food", 0);
-            Statistics.Add("Associated object", 0);
-            Statistics.Add("Associated attire", 0);
-            Statistics.Add("Nationalistic/cultural element", 0);
+            //Statistics.Add("Cultural Attribute", 0);
+            //Statistics.Add("Date", 0);
+            //Statistics.Add("Definition", 0);
+            //Statistics.Add("Experience/Memory", 0);
+            //Statistics.Add("Frequency", 0);
+            //Statistics.Add("Interesting Fact", 0);
+            //Statistics.Add("Location", 0);
+            //Statistics.Add("Name", 0);
+            //Statistics.Add("Significance", 0);
+            //Statistics.Add("Timeline", 0);
+            //Statistics.Add("Wish", 0);
+            //Statistics.Add("KeyPhrase", 0);
+
+            Statistics.Add("Name",0);
+            Statistics.Add("Function",0);
+            Statistics.Add("Significance",0);
+            Statistics.Add("Experience/memory",0);
+            Statistics.Add("Origin",0);
+            Statistics.Add("Date", 0);
+            Statistics.Add("Associated people group",0);
+            Statistics.Add("Associated activity/event",0);
+            Statistics.Add("Program item",0);
+            Statistics.Add("Related festival",0);
+            Statistics.Add("Interesting fact",0);
+            Statistics.Add("Timeline",0);
+            Statistics.Add("Cultural attribute",0);
+            Statistics.Add("Location",0);
+            Statistics.Add("Wish",0);
+            Statistics.Add("KeyPhrase", 0);
 
         }
         public string Status { get; set; }
@@ -58,16 +63,16 @@ namespace SMPWebservice.Models
     public class Content
     {
         public Content() {
-            record = new Record();
+           
         }       
-        public Record record { get; set; }
+        
         public string Id { get; set; }
         public string Title { get; set; }
         public string Desc { get; set; }
+        public string OrgDesc { get; set; }
         public string ImagePath { get; set; }
         public string DonorName { get; set; }
         public string LocationArea { get; set; }
-        public int ViewCount { get; set; }
-
+        public int ViewCount { get; set; }        
     }
 }

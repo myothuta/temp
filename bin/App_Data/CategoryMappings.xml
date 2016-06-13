@@ -2,44 +2,14 @@
 <Records>
   <Record>
     <Row
-      KeyWord="all over the"
-      Category="Experience/memory"
-    />
-  </Record>
-  <Record>
-    <Row
       KeyWord="be part of"
       Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="be part of"
-      Category="Associated people group"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="during the Chinese"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="during the Chinese"
-      Category="Associated food"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="during the Chinese"
-      Category="Associated object"
     />
   </Record>
   <Record>
     <Row
       KeyWord="games such as"
-      Category="Experience/memory"
+      Category="Associated activity/event"
     />
   </Record>
   <Record>
@@ -51,7 +21,493 @@
   <Record>
     <Row
       KeyWord="I get to"
-      Category="Associated food"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="It was the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my family members"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="and enjoyed the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="as part of the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord=" at the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="at the same"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="during The"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="family and friends"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="for reunion dinner"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="for the first"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="forward to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="friends and"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="gather at my"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="get to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="go to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="going to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="have a"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I decided to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I got to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I grow up"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I play with"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I used"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I used to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I went"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I went to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Look Forward to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="looking forward to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="lot of"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Me and my"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my family and"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my family and I"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my friends"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my friends and I"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my parents"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="of Singapore"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="on the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="On the first day"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="part of"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="participated in the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="play with"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="relatives and friends"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the end of"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the end of the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the festive season"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the first day"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the first day of"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="The first time"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="There was"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="there were"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to a"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="To be"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to have"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to play"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to see the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to take"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to visit"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to watch the"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="together with my"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="We had a"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="We used to have"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="we will"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="we would"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="went to"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="When I was"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="with friends and"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="with my family"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="with my friends"
+      Category="Associated activity/event"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="be part of"
+      Category="Associated people group"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="different types of"
+      Category="Cultural attribute"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="for reunion dinner"
+      Category="Cultural attribute"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="lots of"
+      Category="Cultural attribute"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="New Year goodies"
+      Category="Cultural attribute"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to buy"
+      Category="Cultural attribute"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to eat"
+      Category="Cultural attribute"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="told me that"
+      Category="Cultural attribute"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="with the"
+      Category="Cultural attribute"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="of Singapore"
+      Category="Cultural significance"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="in Singapore"
+      Category="Date"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="It was a "
+      Category="Date"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="on the"
+      Category="Date"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="all over the"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -62,62 +518,14 @@
   </Record>
   <Record>
     <Row
-      KeyWord="I hope Singapore"
-      Category="Wish"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="I hope to"
-      Category="Wish"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="I participated in"
-      Category="Alternative name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="I participated in"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="I remember my"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="I remember my"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
       KeyWord="I remember my"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="It was the"
-      Category="Alternative name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="It was the"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="my family members"
-      Category="Associated object"
+      KeyWord="It was the "
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -128,32 +536,8 @@
   </Record>
   <Record>
     <Row
-      KeyWord="my family members"
-      Category="Location"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="my sister and I"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
       KeyWord="my sister and I"
       Category="Experience/memory"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="my sister and I"
-      Category="Location"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="To be a"
-      Category="Wish"
     />
   </Record>
   <Record>
@@ -164,49 +548,31 @@
   </Record>
   <Record>
     <Row
-      KeyWord="a lot of"
-      Category="Associated activity/event"
+      KeyWord="after school"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="a lot of"
-      Category="Associated belief"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="a lot of"
-      Category="Associated food"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="a lot of"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="a lot of"
-      Category="Associated people group"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="a lot of"
+      KeyWord="all the"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
       KeyWord="and enjoyed the"
-      Category="Associated activity/event"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="and enjoyed the"
+      KeyWord="and I"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord=" as a"
       Category="Experience/memory"
     />
   </Record>
@@ -218,26 +584,14 @@
   </Record>
   <Record>
     <Row
-      KeyWord="as part of"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="as part of"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
       KeyWord="at that time"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="at the same"
-      Category="Associated activity/event"
+      KeyWord=" at the"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -254,61 +608,13 @@
   </Record>
   <Record>
     <Row
-      KeyWord="Chinese New Year"
-      Category="Alternative name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="Chinese New Year"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="Chinese New Year"
-      Category="Associated food"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="Chinese New Year"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="Chinese New Year"
+      KeyWord="during my"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="different types of"
-      Category="Associated food"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="different types of"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="during Chinese New Year"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="during Chinese New Year"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="during Chinese New Year"
+      KeyWord="during recess"
       Category="Experience/memory"
     />
   </Record>
@@ -320,8 +626,14 @@
   </Record>
   <Record>
     <Row
-      KeyWord="family and friends"
-      Category="Associated activity/event"
+      KeyWord="during The"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="enjoyed the"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -332,20 +644,14 @@
   </Record>
   <Record>
     <Row
-      KeyWord="for reunion dinner"
-      Category="Associated activity/event"
+      KeyWord="for me"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="for reunion dinner"
-      Category="Associated food"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="for the first"
-      Category="Associated activity/event"
+      KeyWord="for the "
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -356,56 +662,68 @@
   </Record>
   <Record>
     <Row
-      KeyWord="for the first"
-      Category="Location"
+      KeyWord="for the first time"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="gather at my"
-      Category="Associated activity/event"
+      KeyWord="forward to"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="friends and"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="from the"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="going to"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
       KeyWord="have a lot"
-      Category="Associated people group"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="have a lot"
+      KeyWord="have a lot of"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I am"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
       KeyWord="I decided to"
-      Category="Associated activity/event"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="I decided to"
+      KeyWord="I enjoyed"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
       KeyWord="I got to"
-      Category="Associated food"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="I got to"
       Category="Experience/memory"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="I got to"
-      Category="Location"
     />
   </Record>
   <Record>
@@ -416,8 +734,8 @@
   </Record>
   <Record>
     <Row
-      KeyWord="I like to"
-      Category="Current name"
+      KeyWord="I like"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -428,8 +746,8 @@
   </Record>
   <Record>
     <Row
-      KeyWord="I like to"
-      Category="wISH"
+      KeyWord="I love"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -440,14 +758,20 @@
   </Record>
   <Record>
     <Row
-      KeyWord="I play with"
-      Category="Associated object"
+      KeyWord="I remember"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="I used to"
-      Category="Associated activity/event"
+      KeyWord="I remembered"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I used"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -458,8 +782,20 @@
   </Record>
   <Record>
     <Row
-      KeyWord="I went to"
-      Category="Associated activity/event"
+      KeyWord="I used to play"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I want to have"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I went"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -470,13 +806,31 @@
   </Record>
   <Record>
     <Row
-      KeyWord="I went to"
-      Category="Location"
+      KeyWord="I went to my"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="In front of"
+      KeyWord="I went to the"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="in my"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="in school"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="in the"
       Category="Experience/memory"
     />
   </Record>
@@ -484,12 +838,6 @@
     <Row
       KeyWord="in the past"
       Category="Experience/memory"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="in the past"
-      Category="wish"
     />
   </Record>
   <Record>
@@ -500,26 +848,14 @@
   </Record>
   <Record>
     <Row
-      KeyWord="It was a"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="It was a"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="it was a"
+      KeyWord="it was"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="It was a"
-      Category="Frequency"
+      KeyWord="It was a "
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -542,26 +878,20 @@
   </Record>
   <Record>
     <Row
-      KeyWord="Look Forward to"
-      Category="Alternative name"
+      KeyWord="Launch of"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="like to"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
       KeyWord="Look Forward to"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="Look Forward to"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="Look Forward to"
-      Category="Social significance [in people’s lives]"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -572,104 +902,68 @@
   </Record>
   <Record>
     <Row
-      KeyWord="looking forward to"
-      Category="Alternative name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="looking forward to"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="looking forward to"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="Me and my"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
       KeyWord="Me and my"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="Me and my"
-      Category="Location"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="my family and"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="my family and"
-      Category="Associated food"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="my family and"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="my family and"
-      Category="Location"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="My favourites Place"
-      Category="Location"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="National Day parade"
+      KeyWord="Memories of"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="New Year goodies"
-      Category="Associated activity/event"
+      KeyWord="my childhood"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="New Year goodies"
-      Category="Associated food"
+      KeyWord="my family"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="New Year goodies"
-      Category="Associated object"
+      KeyWord="my family and"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="On the first day"
-      Category="Associated activity/event"
+      KeyWord="my family and I"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="On the first day"
-      Category="Associated object"
+      KeyWord="my favourite"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my first"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my friends"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my friends and I"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my parents"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -681,73 +975,19 @@
   <Record>
     <Row
       KeyWord="one of my"
-      Category="Alternative name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="one of my"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="Over the year"
+      KeyWord="one of my favourite"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="participated in the"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="participated in the"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="relatives and friends"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="Singapore will be"
-      Category="Wish"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the Chingay parade"
+      KeyWord="play with"
       Category="Experience/memory"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the Christmas tree"
-      Category="Associated belief"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the Christmas tree"
-      Category="Associated object"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the end of"
-      Category="Associated attire"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the end of"
-      Category="Associated object"
     />
   </Record>
   <Record>
@@ -758,14 +998,8 @@
   </Record>
   <Record>
     <Row
-      KeyWord="the end of"
-      Category="Location"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the festive season"
-      Category="Associated activity/event"
+      KeyWord="the end of the"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -776,26 +1010,8 @@
   </Record>
   <Record>
     <Row
-      KeyWord="the first day"
-      Category="Alternative name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the first day"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the first day"
-      Category="Associated people group"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="the first day"
-      Category="Current name"
+      KeyWord="the first"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -807,25 +1023,25 @@
   <Record>
     <Row
       KeyWord="The first time"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="The first time"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="The first time"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="The first time"
-      Category="Location"
+      KeyWord="the first time I"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the good old days"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="There was"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -836,74 +1052,38 @@
   </Record>
   <Record>
     <Row
+      KeyWord="there were"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to be part of"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to buy"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to celebrate"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
       KeyWord="to celebrate the"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="to go to"
-      Category="Location"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="to have a"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="to have a"
-      Category="Associated food"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="to have a"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="to have a"
-      Category="Wish"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="to see the"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="to see the"
-      Category="Location"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="to watch the"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="to watch the"
-      Category="Current name"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="together with my"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="together with my"
-      Category="Associated food"
+      KeyWord="to my"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -915,18 +1095,24 @@
   <Record>
     <Row
       KeyWord="told me that"
-      Category="Associated belief"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="told me that"
       Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="Used to be"
+      KeyWord="used to"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="want to"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord=" was a "
       Category="Experience/memory"
     />
   </Record>
@@ -944,14 +1130,26 @@
   </Record>
   <Record>
     <Row
-      KeyWord="was held at"
-      Category="Location"
+      KeyWord="was my first time"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="We had a"
-      Category="Associated activity/event"
+      KeyWord="was one of the"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="was the first time"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="We had"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -968,8 +1166,20 @@
   </Record>
   <Record>
     <Row
-      KeyWord="When I grew up"
-      Category="Wish"
+      KeyWord="We used to play"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="went to"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="When I"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -980,8 +1190,14 @@
   </Record>
   <Record>
     <Row
-      KeyWord="with friends and"
-      Category="Associated activity/event"
+      KeyWord="when I was young"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="with friends"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -992,14 +1208,8 @@
   </Record>
   <Record>
     <Row
-      KeyWord="with my family"
-      Category="Associated activity/event"
-    />
-  </Record>
-  <Record>
-    <Row
-      KeyWord="with my family"
-      Category="Associated food"
+      KeyWord="with my"
+      Category="Experience/memory"
     />
   </Record>
   <Record>
@@ -1010,26 +1220,686 @@
   </Record>
   <Record>
     <Row
+      KeyWord="with my friends"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="with my friends and"
+      Category="Experience/memory"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="in Singapore"
+      Category="Function"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord=" is the "
+      Category="Function"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the Singapore"
+      Category="Function"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="during the Chinese"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I remember my"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my family members"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my sister and I"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="a lot"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="all the"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="and I"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="and the"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord=" as a"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Chinese New Year"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="different types of"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="during Chinese New Year"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="for the "
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="for the first"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="from the "
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="have a lot"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="have a lot of"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I am"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I got to"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="is a"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="is the"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="It is "
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="it was"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Look Forward to"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="lot of"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Me and my"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my family"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="my family and"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="National Day parade"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="new year"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="New Year goodies"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="of the"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="on the"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="On the first day"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="one of"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="one of my"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="part of"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Singapore Arts"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the Chinese"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the Chingay parade"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the Christmas tree"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the end of"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the first"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the first day"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="The first time"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="This is"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to a"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="To be"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to see the"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to the"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="When I"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="When I was"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="will be"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
       KeyWord="with my family"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="with my frineds"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="with the"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="would be"
+      Category="KeyPhrase"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I went to"
       Category="Location"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="with my frineds"
-      Category="Associated object"
+      KeyWord="My favourites Place"
+      Category="Location"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="with my frineds"
-      Category="Experience/memory"
+      KeyWord="to go to"
+      Category="Location"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="with my frineds"
-      Category="wish"
+      KeyWord="was held at"
+      Category="Location"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I participated in"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I participated in"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="It was the"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord=" as the "
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="It is "
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="It was a "
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Look Forward to"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Look Forward to"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="looking forward to"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="looking forward to"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="participated in the"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the first day"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="The first time"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to celebrate"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to celebrate the"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to watch the"
+      Category="Name"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="every year"
+      Category="Timeline"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="in the past"
+      Category="Timeline"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="of Singapore"
+      Category="Timeline"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Over the years"
+      Category="Timeline"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="the first"
+      Category="Timeline"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Used to be"
+      Category="Timeline"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I hope Singapore"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I hope to"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="To be a"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="do well in my"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="have a"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I aspire to be"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I grow up"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I like to"
+      Category="wISH"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I want"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I want Singapore to"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I want to be"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I want to become"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I want to have"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I wish"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I wish I have"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I wish Singapore to"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I wish Singapore will"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="I wish to be"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="Singapore will be"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to be"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="to do well in"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="want Singapore to be"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="want to"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="want to be an"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="want to become a"
+      Category="Wish"
+    />
+  </Record>
+  <Record>
+    <Row
+      KeyWord="When I grew up"
+      Category="Wish"
     />
   </Record>
 </Records>
