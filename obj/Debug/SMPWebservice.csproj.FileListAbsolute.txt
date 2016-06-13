@@ -1,0 +1,38 @@
+c:\users\myothuta\documents\visual studio 2010\Projects\SMPWebservice\SMPWebservice\bin\SMPWebservice.dll
+c:\users\myothuta\documents\visual studio 2010\Projects\SMPWebservice\SMPWebservice\bin\SMPWebservice.pdb
+c:\users\myothuta\documents\visual studio 2010\Projects\SMPWebservice\SMPWebservice\bin\EntityFramework.dll
+c:\users\myothuta\documents\visual studio 2010\Projects\SMPWebservice\SMPWebservice\bin\EntityFramework.xml
+c:\users\myothuta\documents\visual studio 2010\Projects\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.dll
+c:\users\myothuta\documents\visual studio 2010\Projects\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.pdb
+D:\NTU\CI\SMPWebservice\SMPWebservice\bin\SMPWebservice.dll
+D:\NTU\CI\SMPWebservice\SMPWebservice\bin\SMPWebservice.pdb
+D:\NTU\CI\SMPWebservice\SMPWebservice\bin\EntityFramework.dll
+D:\NTU\CI\SMPWebservice\SMPWebservice\bin\EntityFramework.xml
+D:\NTU\CI\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.dll
+D:\NTU\CI\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.pdb
+D:\NTU\CI\SMPWebservice\SMPWebservice\obj\Debug\SMPWebservice.csprojResolveAssemblyReference.cache
+C:\Users\myothuta\documents\visual studio 2010\Projects\SMPWebservice\SMPWebservice\bin\App_Data\CategoryMappings.xml
+D:\NTU\CI\SMPWebservice\SMPWebservice\bin\App_Data\CategoryMappings.xml
+D:\exam\CI\temp-master\bin\App_Data\CategoryMappings.xml
+D:\exam\CI\temp-master\bin\SMPWebservice.dll
+D:\exam\CI\temp-master\bin\SMPWebservice.pdb
+D:\exam\CI\temp-master\obj\Debug\SMPWebservice.dll
+D:\exam\CI\temp-master\obj\Debug\SMPWebservice.pdb
+D:\exam\CI\temp\bin\App_Data\CategoryMappings.xml
+D:\exam\CI\temp\bin\SMPWebservice.dll
+D:\exam\CI\temp\bin\SMPWebservice.pdb
+D:\exam\CI\temp\obj\Debug\SMPWebservice.dll
+D:\exam\CI\temp\obj\Debug\SMPWebservice.pdb
+E:\KaungPyie_Data\Working\temp-master\temp-master\obj\Debug\SMPWebservice.csprojResolveAssemblyReference.cache
+E:\KaungPyie_Data\Working\temp-master\temp-master\obj\Debug\SMPWebservice.dll
+E:\KaungPyie_Data\Working\temp-master\temp-master\bin\App_Data\CategoryMappings.xml
+E:\KaungPyie_Data\Working\temp-master\temp-master\bin\SMPWebservice.dll
+E:\KaungPyie_Data\Working\temp-master\temp-master\bin\SMPWebservice.pdb
+E:\KaungPyie_Data\Working\temp-master\temp-master\obj\Debug\SMPWebservice.pdb
+D:\NTU\CI\temp\bin\App_Data\CategoryMappings.xml
+D:\NTU\CI\temp\bin\SMPWebservice.dll
+D:\NTU\CI\temp\bin\SMPWebservice.pdb
+D:\NTU\CI\temp\obj\Debug\SMPWebservice.dll
+D:\NTU\CI\temp\obj\Debug\SMPWebservice.pdb
+D:\NTU\CI\temp\bin\System.Web.Mvc.dll
+D:\NTU\CI\temp\bin\System.Web.Mvc.xml

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchResponse xmlns="http://ws.nlb.gov.sg/M/SM" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <Status>OK</Status>
+  <Message>Operation completed successfully</Message>
+  <ErrorMessage i:nil="true"></ErrorMessage>
+  <TotalRecords>67</TotalRecords>
+  <NextRecordPosition>2</NextRecordPosition>
+  <Contents>
+    <Content>
+      <Id>SMA-59513d4f-9edc-4771-be20-a93b7fd225a0</Id>
+      <Title></Title>
+      <Desc>
+        I would like to contribute a little episode of my childhood experience. This incident happened around the early 1950′s. I was staying at Upper East Coast Road opposite the old Ocean Park Hotel. One day I caught a huge snake-head from the stilt-toilet over the pond. I had an interesting life staying in a dinky old lean-to shed with my widowed mum who was a washer-woman. I never thought I was very poor. I was even living next to a pig’s sty. The smell &amp; the continuous grunting didn’t bother me. I only realised when some school-mates who visited me commented about. What I looked forward was the Chinese Opera. Usually the stage was empty most of the year round. But certain festivals like the seven month (the ghost month) or the god’s of the temple birthday; the opera would be
+        staged. I was a mischievous lad. With 2 other friends we went beneath the stage and started poking thin sticks between the planks. The bare-foot ‘soldiers’ would suffer the brunt of out mischieves. The audience laughed to witness the discomforts that they suffered. Of course the mischievous deeds stopped when we got whoped by gangsters. My ‘uncle’ (mother’s boy friend ) came to settle the situation.
+      </Desc>
+      <ImagePath>http://www-stg.singaporememory.sg/thumbnails/contents/SMA-59513d4f-9edc-4771-be20-a93b7fd225a0?size=2</ImagePath>
+      <DonorName>Wong Kang Leng</DonorName>
+      <LocationArea></LocationArea>
+      <ViewCount>236</ViewCount>
+    </Content>
+  </Contents>
+</SearchResponse>
+
+

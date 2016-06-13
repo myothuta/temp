@@ -1,0 +1,12 @@
+D:\NTU\CI\temp-master\bin\App_Data\CategoryMappings.xml
+D:\NTU\CI\temp-master\bin\SMPWebservice.dll
+D:\NTU\CI\temp-master\bin\SMPWebservice.pdb
+D:\NTU\CI\temp-master\obj\Release\SMPWebservice.dll
+D:\NTU\CI\temp-master\obj\Release\SMPWebservice.pdb
+D:\NTU\CI\temp\bin\App_Data\CategoryMappings.xml
+D:\NTU\CI\temp\bin\SMPWebservice.dll
+D:\NTU\CI\temp\bin\SMPWebservice.pdb
+D:\NTU\CI\temp\obj\Release\SMPWebservice.dll
+D:\NTU\CI\temp\obj\Release\SMPWebservice.pdb
+D:\NTU\CI\temp\bin\System.Web.Mvc.dll
+D:\NTU\CI\temp\bin\System.Web.Mvc.xml
