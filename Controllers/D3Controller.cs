@@ -168,7 +168,7 @@ namespace SMPWebservice.Controllers
                 //returnResult.TotalRecords = totalRecords;
                 //returnResult.Statistics = response.Statistics;
                 //returnResult.Contents = contents.ToArray();
-
+                string testing = "test";
                 D3MindMapData d3Data = new D3MindMapData(response, text);
                 return Json(d3Data, JsonRequestBehavior.AllowGet);
             }
