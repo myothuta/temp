@@ -29,11 +29,6 @@ E:\KaungPyie_Data\Working\temp-master\temp-master\bin\App_Data\CategoryMappings.
 E:\KaungPyie_Data\Working\temp-master\temp-master\bin\SMPWebservice.dll
 E:\KaungPyie_Data\Working\temp-master\temp-master\bin\SMPWebservice.pdb
 E:\KaungPyie_Data\Working\temp-master\temp-master\obj\Debug\SMPWebservice.pdb
-D:\NTU\CI\temp-master\obj\Debug\SMPWebservice.dll
-D:\NTU\CI\temp-master\obj\Debug\SMPWebservice.pdb
-D:\NTU\CI\temp-master\bin\App_Data\CategoryMappings.xml
-D:\NTU\CI\temp-master\bin\SMPWebservice.dll
-D:\NTU\CI\temp-master\bin\SMPWebservice.pdb
 D:\NTU\CI\temp\bin\App_Data\CategoryMappings.xml
 D:\NTU\CI\temp\bin\SMPWebservice.dll
 D:\NTU\CI\temp\bin\SMPWebservice.pdb

@@ -31,7 +31,7 @@ namespace SMPWebservice.Models
      
              
     }
-    public class Record {        
+    public class Record {
         public string Keyword { get; set; }
         public string Category { get; set; }
     }

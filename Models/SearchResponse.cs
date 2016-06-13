@@ -12,7 +12,7 @@ namespace SMPWebservice.Models
         [XmlIgnore]
         public Dictionary<string, int> Statistics { get; set; }
         [XmlIgnore]
-        public Dictionary<string, Record> statisticsId = new Dictionary<string, Record>();
+        public Dictionary<string, string> statisticsId = new Dictionary<string, string>();
         [XmlIgnore]
         public List<string> keywords { get; set; }
         public SearchResponse() {
@@ -63,9 +63,9 @@ namespace SMPWebservice.Models
     public class Content
     {
         public Content() {
-           
+            record = new Record();
         }       
-        
+        public Record record { get; set; }
         public string Id { get; set; }
         public string Title { get; set; }
         public string Desc { get; set; }
@@ -73,6 +73,8 @@ namespace SMPWebservice.Models
         public string ImagePath { get; set; }
         public string DonorName { get; set; }
         public string LocationArea { get; set; }
-        public int ViewCount { get; set; }        
+        public int ViewCount { get; set; }
+        public string Category { get; set; }
+        public string KeyWord { get; set; }
     }
 }

@@ -50,7 +50,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord=" at the"
+      KeyWord="at the"
       Category="Associated activity/event"
     />
   </Record>
@@ -494,7 +494,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord="It was a "
+      KeyWord="It was a"
       Category="Date"
     />
   </Record>
@@ -524,7 +524,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord="It was the "
+      KeyWord="It was the"
       Category="Experience/memory"
     />
   </Record>
@@ -572,7 +572,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord=" as a"
+      KeyWord="as a"
       Category="Experience/memory"
     />
   </Record>
@@ -590,7 +590,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord=" at the"
+      KeyWord="at the"
       Category="Experience/memory"
     />
   </Record>
@@ -650,7 +650,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord="for the "
+      KeyWord="for the"
       Category="Experience/memory"
     />
   </Record>
@@ -854,7 +854,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord="It was a "
+      KeyWord="It was a"
       Category="Experience/memory"
     />
   </Record>
@@ -1112,7 +1112,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord=" was a "
+      KeyWord="was a"
       Category="Experience/memory"
     />
   </Record>
@@ -1238,7 +1238,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord=" is the "
+      KeyWord="is the"
       Category="Function"
     />
   </Record>
@@ -1298,7 +1298,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord=" as a"
+      KeyWord="as a"
       Category="KeyPhrase"
     />
   </Record>
@@ -1322,7 +1322,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord="for the "
+      KeyWord="for the"
       Category="KeyPhrase"
     />
   </Record>
@@ -1334,7 +1334,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord="from the "
+      KeyWord="from the"
       Category="KeyPhrase"
     />
   </Record>
@@ -1376,7 +1376,7 @@
   </Record>
   <Record>
     <Row
-      KeyWord="It is "
+      KeyWord="It is"
       Category="KeyPhrase"
     />
   </Record>
@@ -1634,19 +1634,19 @@
   </Record>
   <Record>
     <Row
-      KeyWord=" as the "
+      KeyWord="as the"
       Category="Name"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="It is "
+      KeyWord="It is"
       Category="Name"
     />
   </Record>
   <Record>
     <Row
-      KeyWord="It was a "
+      KeyWord="It was a"
       Category="Name"
     />
   </Record>

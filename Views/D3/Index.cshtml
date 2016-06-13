@@ -116,7 +116,7 @@
                     if (d != undefined)
 
                         if (d.children) {
-
+                           
                             d.children.forEach(toggleAll);
                             toggle(d);
                         }
@@ -165,7 +165,7 @@
       .attr("x", function (d) { return d.children || d._children ? -10 : 10; })
       .attr("dy", ".35em")
       .attr("text-anchor", function (d) { return d.children || d._children ? "end" : "start"; })
-     .html(function (d) { return d.name })
+      .html(function (d) { return d.name; })
        .on("click", function (d) {
            ShowDetail(d);
        })
@@ -234,14 +234,14 @@
 
             // Toggle children.
             function toggle(d) {
-
+                
                 if (d != undefined)
                     if (d.children) {
-
+                       
                         d._children = d.children;
                         d.children = null;
                     } else {
-
+                       
                         d.children = d._children;
                         d._children = null;
                     }
