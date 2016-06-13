@@ -34,3 +34,5 @@ D:\NTU\CI\temp\bin\SMPWebservice.dll
 D:\NTU\CI\temp\bin\SMPWebservice.pdb
 D:\NTU\CI\temp\obj\Debug\SMPWebservice.dll
 D:\NTU\CI\temp\obj\Debug\SMPWebservice.pdb
+D:\NTU\CI\temp\bin\System.Web.Mvc.dll
+D:\NTU\CI\temp\bin\System.Web.Mvc.xml
