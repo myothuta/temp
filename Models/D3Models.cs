@@ -274,42 +274,78 @@ namespace SMPWebservice.Models
                 d3ChildCat.depth = 1;
                 string SentenceByWord = "";
 
-                IEnumerable<Content> contents = Resp.Contents.Where(x => x.Category == category.Key);
-                if (contents.Count() > 0)
-                {
-                    NoOfPost = 0;
-                    d3ChildCat._children = new List<children>();
-                    foreach (var v in contents)
-                    {
-                        if (NoOfPost > 30) continue;
+                NoOfPost = 0;
+                d3ChildCat._children = new List<children>();
 
-                        children _child = new children();
-                        _child.Desc = v.Desc;
-                        SentenceByWord = GetSentencebyKeyword(v.OrgDesc,v.KeyWord);
-                        int maxlength = 500;
-                        maxlength = SentenceByWord.Length > 500 ? maxlength : SentenceByWord.Length;
-                        _child.name = SentenceByWord.Substring(0, maxlength);
-                        _child.Title = v.Title;
-                        _child.ImagePath = v.ImagePath;
-                        _child.LocationArea = v.LocationArea;
-                        _child.ViewCount = v.ViewCount;
-                        _child.DonorName = v.DonorName;
-                        _child.id = count++;
-                        _child.SMPID = v.Id;
-                        NoOfPost++;
-                        d3ChildCat._children.Add(_child);
+                foreach (var kvp in Resp.statisticsId)
+                {
+                    if (kvp.Value != null && kvp.Value.Category == category.Key)
+                    {
+                        string id = kvp.Key.Split(new string[] { "|" }, StringSplitOptions.None)[0];
+                        var v = Resp.Contents
+                                        .FirstOrDefault(x => x.Id == id);
+                        if (v.Id != "")
+                        {
+                            children _child = new children();
+                            _child.Desc = v.Desc;
+                            _child.Desc = v.Desc.Replace(kvp.Value.Keyword, "<span class='post-tag'>" + kvp.Value.Keyword + "</span>");
+                            SentenceByWord = GetSentencebyKeyword(v.Desc, kvp.Value.Keyword);
+                            int maxlength = 500;
+                            maxlength = SentenceByWord.Length > 500 ? maxlength : SentenceByWord.Length;
+                            _child.name = SentenceByWord.Substring(0, maxlength);
+                            _child.Title = v.Title;
+                            _child.ImagePath = v.ImagePath;
+                            _child.LocationArea = v.LocationArea;
+                            _child.ViewCount = v.ViewCount;
+                            _child.DonorName = v.DonorName;
+                            _child.id = count++;
+                            _child.SMPID = v.Id;
+                            NoOfPost++;
+                            d3ChildCat._children.Add(_child);
+
+                        }
 
                     }
                 }
+
+
+                //IEnumerable<Content> contents = Resp.Contents.Where(x => x.Category == category.Key);
+                //if (contents.Count() > 0)
+                //{
+                //    NoOfPost = 0;
+                //    d3ChildCat._children = new List<children>();
+                //    foreach (var v in contents)
+                //    {
+                //        if (NoOfPost > 30) continue;
+
+                //        children _child = new children();
+                //        _child.Desc = v.Desc;
+                //        SentenceByWord = GetSentencebyKeyword(v.Desc,v.KeyWord);
+                //        int maxlength = 500;
+                //        maxlength = SentenceByWord.Length > 500 ? maxlength : SentenceByWord.Length;
+                //        _child.name = SentenceByWord.Substring(0, maxlength);
+                //        _child.Title = v.Title;
+                //        _child.ImagePath = v.ImagePath;
+                //        _child.LocationArea = v.LocationArea;
+                //        _child.ViewCount = v.ViewCount;
+                //        _child.DonorName = v.DonorName;
+                //        _child.id = count++;
+                //        _child.SMPID = v.Id;
+                //        NoOfPost++;
+                //        d3ChildCat._children.Add(_child);
+
+                //    }
+                //}
                 d3Root.children.Add(d3ChildCat);
 
             }
 
         }
 
-        public string GetSentencebyKeyword(string sentences,string keyword)
+        public string GetSentencebyKeyword(string sentences, string keyword)
         {
             string resultStr = sentences;
+
             var r = new Regex("[^.!?;]*(" + keyword + ")[^.!?;]*");
             var m = r.Matches(sentences);
 
@@ -317,6 +353,7 @@ namespace SMPWebservice.Models
             if (result.Count > 0)
             {
                 resultStr = result.First();
+                resultStr = resultStr.Replace(keyword, " (" + keyword.Trim() + ") ");
             }
 
             return resultStr;

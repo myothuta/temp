@@ -17,7 +17,7 @@ namespace SMPWebservice.Controllers
         public ActionResult Index()
         {
 
-            var record=CategoryMappings.Records;
+            var record = CategoryMappings.Records;
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
             return View();
@@ -38,7 +38,7 @@ namespace SMPWebservice.Controllers
             if (result == null)
             {
                 result = new SearchResponse();
-                
+
                 XmlSerializer serializer = new XmlSerializer(typeof(SearchResponse));
 
                 int nextStartPosition = 0;
@@ -61,14 +61,15 @@ namespace SMPWebservice.Controllers
                         {
                             if (result.Statistics.ContainsKey(r.Category))
                             {
-                                if (!result.statisticsId.ContainsKey(c.Id + r.Category))
+                                if (!result.statisticsId.ContainsKey(c.Id + "|" + r.Category))
                                 {
                                     result.Statistics[r.Category] += 1;
-                                    result.statisticsId.Add(c.Id + r.Category, "");
+                                    result.statisticsId.Add(c.Id + "|" + r.Category, r);
                                 }
 
                             }
-                            c.record = r;
+
+
                         }
                     }
                 }
@@ -89,20 +90,22 @@ namespace SMPWebservice.Controllers
                         result = serializer.Deserialize(reader) as SearchResponse;
                         storeContents = storeContents.Union(result.Contents).ToArray();
 
-                        foreach (Content c in storeContents) {
+                        foreach (Content c in storeContents)
+                        {
                             string desc = c.Desc;
                             IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
-                            foreach (Record r in contain) {
+                            foreach (Record r in contain)
+                            {
                                 if (result.Statistics.ContainsKey(r.Category))
                                 {
-                                    if (!result.statisticsId.ContainsKey(c.Id+r.Category))
+                                    if (!result.statisticsId.ContainsKey(c.Id + "|" + r.Category))
                                     {
                                         result.Statistics[r.Category] += 1;
-                                        result.statisticsId.Add(c.Id+r.Category, "");
+                                        result.statisticsId.Add(c.Id + "|" + r.Category, r);
                                     }
-                                    
+
                                 }
-                                c.record = r;
+
                             }
                         }
                     }
@@ -113,14 +116,15 @@ namespace SMPWebservice.Controllers
 
                 result.Contents = storeContents;
 
-                WebCache.Set("searchResponse" + text, result);
+                WebCache.Set("searchResponse" + text, result, 120);
             }
 
             returnResult.StartPosition = 1;
             returnResult.CurrentPosition = 1;
             returnResult.TotalRecords = result.TotalRecords;
             Content[] returnContents = new Content[10];
-            if (returnResult.TotalRecords < 10) {
+            if (returnResult.TotalRecords < 10)
+            {
                 returnContents = new Content[returnResult.TotalRecords];
             }
             for (int i = 0; i < returnContents.Length; i++)
@@ -133,14 +137,15 @@ namespace SMPWebservice.Controllers
             return PartialView(returnResult);
         }
 
-        public ActionResult UpdateCategory() {
+        public ActionResult UpdateCategory()
+        {
             string text = Session["text"].ToString();
             SearchResponse returnResult = WebCache.Get("searchResponse" + text);
-            
+
             return PartialView(returnResult);
         }
 
-        public ActionResult Navigate(int start,int index,string command)
+        public ActionResult Navigate(int start, int index, string command)
         {
             string text = Session["text"].ToString();
             SearchResponse returnResult = new SearchResponse();
@@ -159,14 +164,15 @@ namespace SMPWebservice.Controllers
             returnResult.keywords = result.keywords;
             decimal pages = Decimal.Ceiling(Convert.ToDecimal(returnResult.TotalRecords) / 10);
 
-            int from = (index*10)-10 ;
+            int from = (index * 10) - 10;
             int to = (index * 10);
             if (to > result.TotalRecords) to = result.TotalRecords;
-            if (from > to) {
-                from = (Convert.ToInt32(pages)-1)*10;
+            if (from > to)
+            {
+                from = (Convert.ToInt32(pages) - 1) * 10;
                 returnResult.CurrentPosition = Convert.ToInt32(pages);
             }
-            Content[] returnContents = new Content[to-from];
+            Content[] returnContents = new Content[to - from];
             int current = 0;
             for (int i = from; i < to; i++)
             {
@@ -174,35 +180,35 @@ namespace SMPWebservice.Controllers
                 current++;
             }
             returnResult.Contents = returnContents;
-            
 
-            if (command=="next")
+
+            if (command == "next")
             {
                 if (returnResult.TotalRecords > 0)
                 {
-                  
+
                     if (pages >= start + 10)
                     {
                         returnResult.StartPosition += 10;
                     }
                 }
             }
-          
-            return PartialView("Search",returnResult);
+
+            return PartialView("Search", returnResult);
         }
 
         public ActionResult SearchByCategory(string category)
         {
             string text = Session["text"].ToString();
             SearchResponse response = WebCache.Get("searchResponse" + text);
-            SearchResponse returnResult = new SearchResponse() ;
-            returnResult.keywords = new List<string>();            
+            SearchResponse returnResult = new SearchResponse();
+            returnResult.keywords = new List<string>();
             Dictionary<string, Content> contents = new Dictionary<string, Models.Content>();
             int totalRecords = 0;
             foreach (Content c in response.Contents)
             {
                 string desc = c.Desc;
-                
+
                 IEnumerable<Record> contain = CategoryMappings.Records.Where(x => desc.Contains(x.Keyword));
                 foreach (Record r in contain)
                 {
@@ -214,7 +220,8 @@ namespace SMPWebservice.Controllers
                             copyContent = contents[c.Id];
                             copyContent.Desc = copyContent.Desc.Replace(r.Keyword, "<span class='post-tag'>" + r.Keyword + "</span>");
                         }
-                        else {
+                        else
+                        {
                             contents.Add(c.Id, copyContent);
                             totalRecords += 1;
                             copyContent.Desc = desc.Replace(r.Keyword, "<span class='post-tag'>" + r.Keyword + "</span>");
@@ -222,30 +229,30 @@ namespace SMPWebservice.Controllers
                             copyContent.Id = c.Id;
                             copyContent.ImagePath = c.ImagePath;
                             copyContent.LocationArea = c.LocationArea;
-                            copyContent.record = c.record;
                             copyContent.Title = c.Title;
                             copyContent.ViewCount = c.ViewCount;
-                        }                        
-                       
+
+                        }
+
                         if (!returnResult.keywords.Contains(r.Keyword))
                             returnResult.keywords.Add(r.Keyword);
 
                     }
                 }
-                
+
             }
             returnResult.StartPosition = 1;
             returnResult.CurrentPosition = 1;
             returnResult.TotalRecords = totalRecords;
             returnResult.Statistics = response.Statistics;
             returnResult.Contents = contents.Values.ToArray();
-            Session["searchResponseCategory"]= returnResult;
-            Session["category"]=true;
+            Session["searchResponseCategory"] = returnResult;
+            Session["category"] = true;
             Session["categoryString"] = category;
             return PartialView("Search", returnResult);
         }
 
-     
+
 
     }
 }

@@ -116,7 +116,7 @@
                     if (d != undefined)
 
                         if (d.children) {
-                           
+
                             d.children.forEach(toggleAll);
                             toggle(d);
                         }
@@ -234,14 +234,14 @@
 
             // Toggle children.
             function toggle(d) {
-                
+
                 if (d != undefined)
                     if (d.children) {
-                       
+
                         d._children = d.children;
                         d.children = null;
                     } else {
-                       
+
                         d.children = d._children;
                         d._children = null;
                     }
