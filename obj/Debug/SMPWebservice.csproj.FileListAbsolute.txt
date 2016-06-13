@@ -32,6 +32,5 @@ E:\KaungPyie_Data\Working\temp-master\temp-master\obj\Debug\SMPWebservice.pdb
 D:\NTU\CI\temp\bin\App_Data\CategoryMappings.xml
 D:\NTU\CI\temp\bin\SMPWebservice.dll
 D:\NTU\CI\temp\bin\SMPWebservice.pdb
-D:\NTU\CI\temp\obj\Debug\SMPWebservice.csprojResolveAssemblyReference.cache
 D:\NTU\CI\temp\obj\Debug\SMPWebservice.dll
 D:\NTU\CI\temp\obj\Debug\SMPWebservice.pdb
